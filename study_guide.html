@@ -626,7 +626,7 @@ $$J=\sum_{i=1}^{k}\sum_{\mathbf x\in C_i}\|\mathbf x-\boldsymbol\mu_i\|^2$$</li>
 <div class="card">
 <h3>개념 시험 답안 쓰는 법 <span class="part">(4/4)</span> — 채점 포인트와 단답형 <span class="src">W5-2 p21 · W7 p2</span></h3>
 <p class="lead">앞 슬라이드의 k-means 예시 답안을 채점자의 눈으로 점검한다. 아래 그림은 "왜 수렴하나"의 근거가 된 슬라이드다.</p>
-<figure class="fig" style="max-width:600px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W5_2-21.jpg" width="1100" height="619" alt="W5-2 p21: k-means 목적함수 inertia 식과 반복마다 감소하는 J 그래프"><figcaption>W5-2 p21. 목적함수 inertia와 "objective never goes up". 반복할수록 J는 줄거나 그대로다.</figcaption></figure>
+<figure class="fig" style="max-width:600px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W5_2-21.webp" width="1100" height="619" alt="W5-2 p21: k-means 목적함수 inertia 식과 반복마다 감소하는 J 그래프"><figcaption>W5-2 p21. 목적함수 inertia와 "objective never goes up". 반복할수록 J는 줄거나 그대로다.</figcaption></figure>
 <div class="two">
 <div class="box info"><span class="bt">채점 포인트 체크</span><ul style="margin:2px 0">
 <li>비지도 학습이라는 점, centroid가 평균이라는 점, 목적함수 식을 쓴다.</li>
@@ -954,7 +954,7 @@ $$\bar{\mathbf x} = \frac{1}{N}\sum_{i=0}^{N-1} \mathbf x_i$$
 <li>루프로 쓰면 <code>sum_x += X[i,:]</code>를 N번 반복한 뒤 <code>/N</code>을 하는 것과 같다. 루프 결과를 <code>X.mean(axis=0)</code>과 비교하면 True가 나온다.</li>
 <li>즉 "axis=0에 마법은 없다."</li>
 </ul>
-<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_1-19.jpg" width="1100" height="619" alt="W3-1 p19 · 14명의 BOLD 곡선(회색)과 평균(검정), N×T 행렬 그림"><figcaption>W3-1 p19 · 회색 = 피험자 14명 각각, 검정 = axis=0 평균. 오른쪽: 행 = 피험자(N), 열 = 시간점(T)</figcaption></figure>
+<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_1-19.webp" width="1100" height="619" alt="W3-1 p19 · 14명의 BOLD 곡선(회색)과 평균(검정), N×T 행렬 그림"><figcaption>W3-1 p19 · 회색 = 피험자 14명 각각, 검정 = axis=0 평균. 오른쪽: 행 = 피험자(N), 열 = 시간점(T)</figcaption></figure>
 <div class="box easy"><span class="bt">🔰 쉽게 말하면</span>
 axis는 어느 방향을 눌러 하나로 합칠지를 정한다. <b>누른 방향은 사라지고 나머지 방향만 남는다.</b>
 <ul>
@@ -1030,7 +1030,7 @@ $$s=\sqrt{\frac{1}{N-1}\sum_{i=0}^{N-1}(x_i-\bar x)^2}$$</div>
 <section class="slide" id="c1-4b" data-ch="c1" data-title="1.4 모집단 SD vs 표본 SD (2/3)">
 <div class="card">
 <h3>1.4 모집단 SD vs 표본 SD <span class="part">(2/3) · 그림과 예</span> <span class="src">W3-1 p22–26 · 실습 W3 2.3</span></h3>
-<figure class="fig" style="max-width:600px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_1-22.jpg" width="1100" height="619" alt="W3-1 p22 · 한 시간점에서 14명 값의 퍼짐(화살표)이 SD"><figcaption>W3-1 p22 · 화살표 = 한 시간점에서 피험자 14명 값의 퍼짐. <code>np.std(X, axis=0)</code>는 이것을 시간점마다 하나씩(길이 T) 계산</figcaption></figure>
+<figure class="fig" style="max-width:600px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_1-22.webp" width="1100" height="619" alt="W3-1 p22 · 한 시간점에서 14명 값의 퍼짐(화살표)이 SD"><figcaption>W3-1 p22 · 화살표 = 한 시간점에서 피험자 14명 값의 퍼짐. <code>np.std(X, axis=0)</code>는 이것을 시간점마다 하나씩(길이 T) 계산</figcaption></figure>
 <div class="box easy"><span class="bt">🔰 쉽게 말하면</span>
 SD는 값들이 평균에서 보통 얼마나 떨어져 있는지를 나타낸다. 숫자 2, 4, 6으로 직접 계산해 보자.
 <ul>
@@ -1127,7 +1127,7 @@ $$\frac{d}{dc}\sum(x_i-c)^2=-2\sum(x_i-c)=0\ \Rightarrow\ c=\bar x$$</li>
 <li>줄어든 양의 기댓값은 정확히 $\sigma^2$ 하나만큼이므로, $N-1$로 나누면 보정된다. 줄어든 양은 증명 3단계의 $N(\bar x-\mu)^2$ 항이다.</li>
 <li>다른 설명도 있다. 편차들의 합이 0이라는 제약이 하나 있으므로 <b>자유도가 N−1</b>이다.</li>
 </ul></div>
-<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 502%22/%3E" data-src="assets/fig/w32_04_bessel.jpg" width="1100" height="502" alt="W3-2 p4 · 모집단(파랑)에서 뽑은 표본(주황) — 표본으로 잰 퍼짐은 평균적으로 모집단보다 작다"><figcaption>W3-2 p4 · 모집단(파랑)에서 뽑은 표본(주황) — 표본으로 잰 퍼짐은 평균적으로 모집단보다 작다</figcaption></figure>
+<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 502%22/%3E" data-src="assets/fig/w32_04_bessel.webp" width="1100" height="502" alt="W3-2 p4 · 모집단(파랑)에서 뽑은 표본(주황) — 표본으로 잰 퍼짐은 평균적으로 모집단보다 작다"><figcaption>W3-2 p4 · 모집단(파랑)에서 뽑은 표본(주황) — 표본으로 잰 퍼짐은 평균적으로 모집단보다 작다</figcaption></figure>
 </div>
 </section>
 
@@ -1230,7 +1230,7 @@ $$\frac{d}{dc}\sum(x_i-c)^2=-2\sum(x_i-c)=0\ \Rightarrow\ c=\bar x$$</li>
 <li>CV 예: 평균 4000 kg, SD 10 kg이면 CV는 1/400이다. 평균 70 kg, SD 10 kg이면 CV는 1/7이다. 같은 SD라도 상대적 변동은 완전히 다르다.</li>
 <li>코끼리는 평균 4000 kg에 SD 400, 쥐는 평균 25 g에 SD 2.5다. 둘 다 CV가 0.10으로 같으므로, CV로는 <b>스케일이 전혀 다른 것끼리도 변동성을 비교</b>할 수 있다. <span class="mini">(자세히는 4/5)</span></li>
 </ul>
-<figure class="fig" style="max-width:520px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 473 372%22/%3E" data-src="assets/fig/w31_28_sem.jpg" width="473" height="372" alt="W3-1 p28 · 같은 데이터의 mean ± SD(넓음) vs mean ± SEM(좁음)"><figcaption>W3-1 p28 · 같은 데이터의 mean ± SD(넓음) vs mean ± SEM(좁음)</figcaption></figure>
+<figure class="fig" style="max-width:520px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 473 372%22/%3E" data-src="assets/fig/w31_28_sem.webp" width="473" height="372" alt="W3-1 p28 · 같은 데이터의 mean ± SD(넓음) vs mean ± SEM(좁음)"><figcaption>W3-1 p28 · 같은 데이터의 mean ± SD(넓음) vs mean ± SEM(좁음)</figcaption></figure>
 <div class="box easy"><span class="bt">🔰 쉽게 말하면</span>
 <ul>
 <li>SD는 "사람들끼리 얼마나 다른가"를 나타낸다. 학생들의 키 차이가 그 예다.</li>
@@ -1385,7 +1385,7 @@ CV는 평균의 몇 %만큼 흔들리는지를 나타낸다.
 <tr><td>feature index</td><td>한 샘플의 유전자 7,129개 발현량</td><td>각 feature 값</td></tr>
 </table></div>
 <p class="mini">같은 1D 자료구조라도 그리는 방식은 다르다("Same 1D data structure, visualized differently."). 시계열은 선 그래프로 그린다(p11). DNA 서열은 위치마다 염기를 색으로 칠한 띠로 그린다(p12). 유전자 발현은 가로축이 유전자 번호(gene index)인 막대 그래프로 그린다(p13).</p>
-<figure class="fig" style="max-width:520px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_1-13.jpg" width="1100" height="619" alt="W3-1 p13 · 가로축이 gene index인 1D 유전자 발현 막대 그래프"><figcaption>W3-1 p13 · 1D 유전자 발현(gene expression). 구조는 같은 1D이지만 축이 유전자 번호이고, 그 순서 자체에는 의미가 없다(추론).</figcaption></figure>
+<figure class="fig" style="max-width:520px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_1-13.webp" width="1100" height="619" alt="W3-1 p13 · 가로축이 gene index인 1D 유전자 발현 막대 그래프"><figcaption>W3-1 p13 · 1D 유전자 발현(gene expression). 구조는 같은 1D이지만 축이 유전자 번호이고, 그 순서 자체에는 의미가 없다(추론).</figcaption></figure>
 <div class="box warn"><span class="bt">주의 <span class="tag inf">추론</span></span>
 자료구조가 같아도 <b>인접한 인덱스가 서로 관련 있는지</b>는 축에 따라 다르다.
 <ul>
@@ -1439,7 +1439,7 @@ CV는 평균의 몇 %만큼 흔들리는지를 나타낸다.
 <li>전극 끝 약 0.1–1 mm 안에 있는 뉴런 수천 개의 <b>시냅스 전류 합</b>이 신호를 지배한다. 즉 집단(population) 신호다.</li>
 <li>전기 신호라서 직접적이고 빠르다. ms 해상도이며 1–30 kHz로 샘플링한다.</li>
 </ul>
-<figure class="fig" style="max-width:520px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 528 390%22/%3E" data-src="assets/fig/w31_14_bold.jpg" width="528" height="390" alt="W3-1 p14 · 피험자 14명의 BOLD 반응(회색)과 평균(검정)"><figcaption>W3-1 p14 · 피험자 14명의 BOLD 반응(회색)과 평균(검정)</figcaption></figure>
+<figure class="fig" style="max-width:520px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 528 390%22/%3E" data-src="assets/fig/w31_14_bold.webp" width="528" height="390" alt="W3-1 p14 · 피험자 14명의 BOLD 반응(회색)과 평균(검정)"><figcaption>W3-1 p14 · 피험자 14명의 BOLD 반응(회색)과 평균(검정)</figcaption></figure>
 <div class="tbl"><table>
 <tr><th></th><th>BOLD (fMRI)</th><th>LFP</th></tr>
 <tr><td>무엇을 재나</td><td>혈액 산소화(deoxy-Hb 양)의 변화</td><td>전극 주변 세포외 전압의 느린 성분</td></tr>
@@ -1491,7 +1491,7 @@ CV는 평균의 몇 %만큼 흔들리는지를 나타낸다.
 <div><b>Subsampling / nearest neighbor</b><br><code>x_ds = x[::2]</code><br>예: 0, 1, 2, …, 11 → 0, 2, 4, 6, 8, 10<br><span class="mini">남긴 샘플의 노이즈가 그대로 유지된다.</span></div>
 <div><b>Block averaging</b><br>$x'_0=\frac{x_0+x_1}{2}$, …<br>결과: 0.5, 2.5, 4.5, …<br><span class="mini">각 블록을 먼저 평균하므로 노이즈가 줄고 느린 파형이 보존된다. step이 w인 sliding window와 같다.</span></div>
 </div>
-<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 594%22/%3E" data-src="assets/fig/w31_29_down.jpg" width="1100" height="594" alt="W3-1 p29 · subsampling(x[::2]) vs block averaging"><figcaption>W3-1 p29 · subsampling(x[::2]) vs block averaging</figcaption></figure>
+<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 594%22/%3E" data-src="assets/fig/w31_29_down.webp" width="1100" height="594" alt="W3-1 p29 · subsampling(x[::2]) vs block averaging"><figcaption>W3-1 p29 · subsampling(x[::2]) vs block averaging</figcaption></figure>
 <p>다운샘플링은 데이터를 압축(compress)하는 데 쓸 수 있다. 직선 데이터에서는 두 방법의 결과가 비슷하다. 하지만 노이즈가 있는 신호에서는 <b>block averaging이 훨씬 낫다</b>. <span class="mini">(notebook: sin파 + 노이즈, 4배 다운샘플)</span></p>
 <div class="box easy"><span class="bt">🔰 쉽게 말하면</span>
 측정값 12개를 6개로 줄이고 싶다고 하자.
@@ -1552,7 +1552,7 @@ CV는 평균의 몇 %만큼 흔들리는지를 나타낸다.
 <li>window가 데이터 안에 완전히 들어가야 하므로 출력 길이는 <b>$N-w+1$</b>이다. 예: N=8, w=3 → 6개.</li>
 <li>window 폭 w는 사용자가 정한다. step은 보통 1이다("usually 1").</li>
 </ul>
-<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_1-30.jpg" width="1100" height="619" alt="W3-1 p30 · x=[4,8,6,2,9,5,7,3]에 w=3 window를 한 칸씩 옮기며 평균, 출력 6개"><figcaption>W3-1 p30 · w=3, step=1: 8개 → 6개(= 8 − 3 + 1), 첫 값 mean(4,8,6) = 6.00</figcaption></figure>
+<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_1-30.webp" width="1100" height="619" alt="W3-1 p30 · x=[4,8,6,2,9,5,7,3]에 w=3 window를 한 칸씩 옮기며 평균, 출력 6개"><figcaption>W3-1 p30 · w=3, step=1: 8개 → 6개(= 8 − 3 + 1), 첫 값 mean(4,8,6) = 6.00</figcaption></figure>
 <h4>왜 $N-w+1$개?</h4>
 <p>window의 시작 위치 i는 0, 1, …, $N-w$까지만 가능하다. 마지막 window <code>x[N-w : N]</code>이 데이터 끝에 딱 맞기 때문이다. 따라서 시작 위치의 개수는 $N-w+1$이다. 예를 들어 8개, w=3이면 i = 0…5이므로 6개다.</p>
 <h4>안의 함수를 바꾸면 다른 도구가 된다 <span class="src">실습 W3 3.2 · x=[4,8,6,2,9,5,7,3], w=3</span></h4>
@@ -1684,7 +1684,7 @@ CV는 평균의 몇 %만큼 흔들리는지를 나타낸다.
 <li><b>Window</b>는 어떤 샘플들을 볼지, 즉 연속된 w개의 구간을 정한다. 그 위에서 할 연산은 정해져 있지 않다(예: ==, min, max, std).</li>
 <li><b>Kernel</b>은 신호에 곱한 뒤 더하는 가중치 리스트다.</li>
 </ul>
-<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 482%22/%3E" data-src="assets/fig/w32_07_kernel.jpg" width="1067" height="482" alt="W3-2 p7 · window(어떤 샘플을 볼지) vs kernel(곱할 가중치)"><figcaption>W3-2 p7 · window(어떤 샘플을 볼지) vs kernel(곱할 가중치)</figcaption></figure>
+<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 482%22/%3E" data-src="assets/fig/w32_07_kernel.webp" width="1067" height="482" alt="W3-2 p7 · window(어떤 샘플을 볼지) vs kernel(곱할 가중치)"><figcaption>W3-2 p7 · window(어떤 샘플을 볼지) vs kernel(곱할 가중치)</figcaption></figure>
 <p>따라서 kernel 연산의 출력은 언제나 <b>가중합(weighted sum)</b>이다. 즉 "가중치 × 샘플"을 모두 더한 값이다.</p>
 <p>그래서 평균(가중치 1/w)은 kernel로 계산할 수 있다. 반면 max, std, ==처럼 "곱하고 더하기"로 쓸 수 없는 연산은 window로만 할 수 있다.</p>
 <div class="box easy"><span class="bt">🔰 쉽게 말하면</span>
@@ -1709,7 +1709,7 @@ CV는 평균의 몇 %만큼 흔들리는지를 나타낸다.
 <h3>2.4 Window vs Kernel · Correlation vs Convolution <span class="part">(2/8)</span> — 두 가지 미끄러뜨리기 <span class="tag must">계산·설명 필수</span><span class="src">W3-2 p8 · W3 notebook 4.2</span></h3>
 $$\text{Correlation: }(x\star h)_t=\sum_k h_k\,x_{t+k}\qquad\qquad \text{Convolution: }(x*h)_t=\sum_k h_k\,x_{t-k}$$
 <p>즉 <b>convolution은 kernel을 뒤집어서(flip) 미끄러뜨린 correlation</b>이다. 슬라이드 그림에서 convolution의 첫 출력은 $y_0=w_2x_0+w_1x_1+w_0x_2$이다.</p>
-<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 576%22/%3E" data-src="assets/fig/w32_08_corrconv.jpg" width="1100" height="576" alt="W3-2 p8 · correlation은 kernel 그대로, convolution은 뒤집어서(flipped)"><figcaption>W3-2 p8 · correlation은 kernel 그대로, convolution은 뒤집어서(flipped)</figcaption></figure>
+<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 576%22/%3E" data-src="assets/fig/w32_08_corrconv.webp" width="1100" height="576" alt="W3-2 p8 · correlation은 kernel 그대로, convolution은 뒤집어서(flipped)"><figcaption>W3-2 p8 · correlation은 kernel 그대로, convolution은 뒤집어서(flipped)</figcaption></figure>
 <h4>식 읽는 법</h4>
 <ul>
 <li>correlation은 $h_k$를 t보다 k만큼 나중 샘플인 $x_{t+k}$와 곱한다. 그래서 kernel이 적힌 순서 그대로 겹친다. 예: $y_0=w_0x_0+w_1x_1+w_2x_2$.</li>
@@ -1779,7 +1779,7 @@ $$\text{Correlation: }(x\star h)_t=\sum_k h_k\,x_{t+k}\qquad\qquad \text{Convolu
 <li><b>Correlation은 교환법칙이 성립하지 않는다</b>: 인자를 바꾸면 출력이 뒤집힌다. [3,8,14,20,26,14,5]가 [5,14,26,20,14,8,3]이 된다.</li>
 <li>kernel이 대칭이면 뒤집어도 같으므로 두 연산은 계산상 동일하다. 예: box, Gaussian.</li>
 </ul>
-<div class="figs2"><figure class="fig"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 576%22/%3E" data-src="assets/fig/w32_10_comm.jpg" width="1100" height="576" alt="W3-2 p10 · correlation은 인자를 바꾸면 결과가 달라짐 (not commutative)"><figcaption>W3-2 p10 · correlation은 인자를 바꾸면 결과가 달라짐 (not commutative)</figcaption></figure><figure class="fig"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 588%22/%3E" data-src="assets/fig/w32_11_comm.jpg" width="1100" height="588" alt="W3-2 p11 · convolution은 인자를 바꿔도 같음 (commutative, a+b=t)"><figcaption>W3-2 p11 · convolution은 인자를 바꿔도 같음 (commutative, a+b=t)</figcaption></figure></div>
+<div class="figs2"><figure class="fig"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 576%22/%3E" data-src="assets/fig/w32_10_comm.webp" width="1100" height="576" alt="W3-2 p10 · correlation은 인자를 바꾸면 결과가 달라짐 (not commutative)"><figcaption>W3-2 p10 · correlation은 인자를 바꾸면 결과가 달라짐 (not commutative)</figcaption></figure><figure class="fig"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 588%22/%3E" data-src="assets/fig/w32_11_comm.webp" width="1100" height="588" alt="W3-2 p11 · convolution은 인자를 바꿔도 같음 (commutative, a+b=t)"><figcaption>W3-2 p11 · convolution은 인자를 바꿔도 같음 (commutative, a+b=t)</figcaption></figure></div>
 <h4>왜 그런가 (유도) <span class="tag add">대입 유도는 자료 외 보충</span></h4>
 <ul>
 <li>convolution의 정의에서 $j=t-k$로 치환하면 다음과 같다.
@@ -1906,8 +1906,8 @@ $$h(t)=\frac{1}{\sqrt{2\pi\sigma^2}}\exp\!\left(-\frac{(t-\mu)^2}{2\sigma^2}\rig
 <li>Gaussian도 smoothing이지만 <b>고주파 노이즈 제거에 더 좋다</b>. box는 가장자리가 딱 끊기고(hard edge), Gaussian은 부드럽게 줄어들기 때문이다.</li>
 <li>두 kernel 모두 대칭이므로 correlation과 convolution의 결과가 같다. notebook은 Gaussian kernel로 이를 확인했고, 두 결과의 최대 차이(max difference)는 0.0이다.</li>
 </ul>
-<figure class="fig" style="max-width:560px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_2-13.jpg" width="1100" height="619" alt="W3-2 p13 · kernel [1/3,1/3,1/3]: y0 = x0/3 + x1/3 + x2/3, 이동평균"><figcaption>W3-2 p13 · box kernel [1/3, 1/3, 1/3]: $y_0=\frac13x_0+\frac13x_1+\frac13x_2$, 즉 이동평균</figcaption></figure>
-<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1023 310%22/%3E" data-src="assets/fig/w32_14_gauss.jpg" width="1023" height="310" alt="W3-2 p14 · box(w=25) vs Gaussian(σ=6) kernel과 LFP에 적용한 결과"><figcaption>W3-2 p14 · box(w=25) vs Gaussian(σ=6) kernel과 LFP에 적용한 결과</figcaption></figure>
+<figure class="fig" style="max-width:560px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_2-13.webp" width="1100" height="619" alt="W3-2 p13 · kernel [1/3,1/3,1/3]: y0 = x0/3 + x1/3 + x2/3, 이동평균"><figcaption>W3-2 p13 · box kernel [1/3, 1/3, 1/3]: $y_0=\frac13x_0+\frac13x_1+\frac13x_2$, 즉 이동평균</figcaption></figure>
+<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1023 310%22/%3E" data-src="assets/fig/w32_14_gauss.webp" width="1023" height="310" alt="W3-2 p14 · box(w=25) vs Gaussian(σ=6) kernel과 LFP에 적용한 결과"><figcaption>W3-2 p14 · box(w=25) vs Gaussian(σ=6) kernel과 LFP에 적용한 결과</figcaption></figure>
 </div>
 </section>
 
@@ -2031,7 +2031,7 @@ $$\sum_k h_k\,a=a\sum_k h_k$$
 <li>예를 들어 실제 체중이 3700 g인데 예측이 3600 g이면 차이는 +100이다. 이 점에서는 벌점으로 100² = 10,000을 더한다.</li>
 <li>β(베타)들은 직선을 정하는 조절 손잡이다. β0(절편)는 직선의 높이를, β1(기울기)은 기울어진 정도를 정한다. 데이터에 맞게 이 손잡이 값을 찾는 것을 학습(fit)이라고 한다.</li>
 </ul></div>
-<figure class="fig" style="max-width:560px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_2-16.jpg" width="1100" height="619" alt="W3-2 p16 · 펭귄 일부 점과 적합 직선, 그리고 빨간 점선으로 표시된 잔차(관측 − 예측)"><figcaption>W3-2 p16 · 직선이 x로 y를 예측한다. 빨간 점선은 남은 오차인 잔차(관측 − 예측)이고, 이 세로 길이들의 제곱합을 최소화한다. 그림의 y축 단위는 kg이다.</figcaption></figure>
+<figure class="fig" style="max-width:560px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_2-16.webp" width="1100" height="619" alt="W3-2 p16 · 펭귄 일부 점과 적합 직선, 그리고 빨간 점선으로 표시된 잔차(관측 − 예측)"><figcaption>W3-2 p16 · 직선이 x로 y를 예측한다. 빨간 점선은 남은 오차인 잔차(관측 − 예측)이고, 이 세로 길이들의 제곱합을 최소화한다. 그림의 y축 단위는 kg이다.</figcaption></figure>
 </div>
 </section>
 
@@ -2206,7 +2206,7 @@ $\mathbf X$의 열들이 선형독립(linearly independent)이면 해는 $\hat{\
 <div class="card">
 <h3>3.4 평가: 잔차(residual)와 R² <span class="part">(1/4)</span> <span class="src">W3-2 p22–23 · notebook 5.3</span></h3>
 $$\text{residual}=y-\hat y=y-\mathbf b\cdot\mathbf x\qquad R^2=1-\frac{SS_{res}}{SS_{tot}}=1-\frac{\sum_i(y_i-\hat y_i)^2}{\sum_i(y_i-\bar y)^2}$$
-<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1001 390%22/%3E" data-src="assets/fig/w32_22_resid.jpg" width="1001" height="390" alt="W3-2 p22 · 적합선(왼쪽)과 잔차 그림(오른쪽): 구조 없음 = 좋은 모델"><figcaption>W3-2 p22 · 왼쪽은 적합선, 오른쪽은 잔차 그림이다. 잔차에 구조가 없으면 좋은 모델이다.</figcaption></figure>
+<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1001 390%22/%3E" data-src="assets/fig/w32_22_resid.webp" width="1001" height="390" alt="W3-2 p22 · 적합선(왼쪽)과 잔차 그림(오른쪽): 구조 없음 = 좋은 모델"><figcaption>W3-2 p22 · 왼쪽은 적합선, 오른쪽은 잔차 그림이다. 잔차에 구조가 없으면 좋은 모델이다.</figcaption></figure>
 <ul>
 <li>좋은 모델이라면 <b>잔차에 구조가 없어야</b> 한다(only noise).</li>
 <li>잔차를 적합값에 대해 그린 그림에서 곡선 패턴이나 깔때기 모양 같은 구조가 보이면, 모델이 무언가를 놓치고 있다는 뜻이다.</li>
@@ -2491,7 +2491,7 @@ $$z=\log\dfrac{p}{1-p}$$
 <div class="card">
 <h3>3.8 Cross-entropy 손실과 학습 <span class="part">(1/3)</span> <span class="src">W4 p9 · notebook 4</span></h3>
 $$\hat p_i=\frac1{1+e^{-(\mathbf w\cdot\mathbf x_i+b)}},\quad y_i\in\{0,1\},\qquad L=-\sum_i\Big(y_i\log\hat p_i+(1-y_i)\log(1-\hat p_i)\Big)$$
-<figure class="fig" style="max-width:460px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 451 278%22/%3E" data-src="assets/fig/w4_09_ce.jpg" width="451" height="278" alt="W4 p9 · 샘플 하나의 cross-entropy: 확신에 찬 오답에서 손실 폭발"><figcaption>W4 p9 · 샘플 하나의 cross-entropy. 확신에 찬 오답에서 손실이 폭발한다.</figcaption></figure>
+<figure class="fig" style="max-width:460px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 451 278%22/%3E" data-src="assets/fig/w4_09_ce.webp" width="451" height="278" alt="W4 p9 · 샘플 하나의 cross-entropy: 확신에 찬 오답에서 손실 폭발"><figcaption>W4 p9 · 샘플 하나의 cross-entropy. 확신에 찬 오답에서 손실이 폭발한다.</figcaption></figure>
 <ul>
 <li>샘플 하나의 손실은 정답 클래스에 준 확률에 −log를 씌운 값이다. $y=1$이면 $-\log\hat p$, $y=0$이면 $-\log(1-\hat p)$이다.</li>
 <li><b>확신하고 맞히면 손실이 거의 0이고, 확신하고 틀리면 손실이 폭발한다</b>(confident and right, confident and wrong).</li>
@@ -2626,7 +2626,7 @@ z-score는 값이 평균에서 표준편차(SD) 몇 개만큼 떨어져 있는�
 $$\text{test loss}=\text{bias}^2+\text{variance}+\text{noise}$$</li>
 <li>U자의 바닥이 best model이다.</li>
 </ul>
-<figure class="fig" style="max-width:860px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1023 278%22/%3E" data-src="assets/fig/w4_10_bv.jpg" width="1023" height="278" alt="W4 p10 · 모델 복잡도에 따른 training/test loss(왼쪽)와 bias²·variance 분해(오른쪽)"><figcaption>W4 p10 · 왼쪽은 모델 복잡도에 따른 training loss와 test loss이고, 오른쪽은 이를 bias²와 variance로 나눈 그림이다.</figcaption></figure>
+<figure class="fig" style="max-width:860px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1023 278%22/%3E" data-src="assets/fig/w4_10_bv.webp" width="1023" height="278" alt="W4 p10 · 모델 복잡도에 따른 training/test loss(왼쪽)와 bias²·variance 분해(오른쪽)"><figcaption>W4 p10 · 왼쪽은 모델 복잡도에 따른 training loss와 test loss이고, 오른쪽은 이를 bias²와 variance로 나눈 그림이다.</figcaption></figure>
 </div>
 </section>
 
@@ -2749,7 +2749,7 @@ $$\tfrac12\|\mathbf w\|^2+C\sum_i\text{CE}_i,\qquad \sum_i\text{CE}_i+\tfrac1{2C
 </table></div>
 $$\text{Accuracy}=\frac{TP+TN}{N_{all}}=\frac{164}{171}=0.959\qquad \text{Precision}=\frac{TP}{TP+FP}=\frac{61}{65}=0.938\qquad \text{Recall}=\frac{TP}{TP+FN}=\frac{61}{64}=0.953$$
 $$F1=\frac{2\cdot\text{Precision}\cdot\text{Recall}}{\text{Precision}+\text{Recall}}=0.946$$
-<figure class="fig" style="max-width:780px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 513%22/%3E" data-src="assets/fig/w4_15_pr.jpg" width="1067" height="513" alt="W4 p15 · TP/FP/FN/TN Venn diagram과 precision·recall"><figcaption>W4 p15 · TP, FP, FN, TN을 나타낸 벤 다이어그램(Venn diagram)과 precision, recall</figcaption></figure>
+<figure class="fig" style="max-width:780px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 513%22/%3E" data-src="assets/fig/w4_15_pr.webp" width="1067" height="513" alt="W4 p15 · TP/FP/FN/TN Venn diagram과 precision·recall"><figcaption>W4 p15 · TP, FP, FN, TN을 나타낸 벤 다이어그램(Venn diagram)과 precision, recall</figcaption></figure>
 <ul>
 <li><b>precision</b>은 모델이 positive라고 한 것 중 진짜 positive의 비율이다. 슬라이드는 이것을 "How accurate is the prediction?"이라고 묻는다.</li>
 <li><b>recall</b>은 진짜 positive 중 모델이 잡아낸 비율이다. 슬라이드는 이것을 "How many did we catch?"라고 묻는다.</li>
@@ -2761,7 +2761,7 @@ $$F1=\frac{2\cdot\text{Precision}\cdot\text{Recall}}{\text{Precision}+\text{Reca
 <section class="slide" id="c3-12a" data-ch="c3" data-title="3.12 평가 지표: confusion matrix, precision, recall (2/6)">
 <div class="card">
 <h3>3.12 평가 지표 <span class="part">(2/6)</span> <span class="src">W4 p12–15 · 실습 W4 6.1–6.2</span></h3>
-<figure class="fig" style="max-width:600px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W4-13.jpg" width="1100" height="619" alt="W4 p13 · 혼동행렬: Ground truth (1) 행에 TP 61, FN 3, Ground truth (0) 행에 FP 4, TN 103"><figcaption>W4 p13 · 슬라이드의 혼동행렬이다. "Ground truth (1)"은 악성을 1(positive)로 그린 <b>개념도</b>다. 실제 데이터 코딩은 0 = malignant, 1 = benign이고, 실습은 <code>pos_label=0</code>을 쓴다.</figcaption></figure>
+<figure class="fig" style="max-width:600px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W4-13.webp" width="1100" height="619" alt="W4 p13 · 혼동행렬: Ground truth (1) 행에 TP 61, FN 3, Ground truth (0) 행에 FP 4, TN 103"><figcaption>W4 p13 · 슬라이드의 혼동행렬이다. "Ground truth (1)"은 악성을 1(positive)로 그린 <b>개념도</b>다. 실제 데이터 코딩은 0 = malignant, 1 = benign이고, 실습은 <code>pos_label=0</code>을 쓴다.</figcaption></figure>
 <div class="box easy"><span class="bt">🔰 쉽게 말하면</span>
 검사 결과는 4칸으로 나뉜다. 이름의 <b>뒷말</b>(positive/negative)은 모델이 뭐라고 했는지를, <b>앞말</b>(true/false)은 그 말이 맞았는지를 나타낸다.
 <ul>
@@ -2827,7 +2827,7 @@ $$F1=\frac{2\cdot\text{Precision}\cdot\text{Recall}}{\text{Precision}+\text{Reca
 <li>곡선의 왼쪽 위는 높은 threshold로, 적게 부르고 다 맞히는 쪽이다. 오른쪽 아래는 threshold 0이다.</li>
 <li>screening에서는 필요한 recall을 먼저 정하고, 그때 감수할 precision을 읽는다.</li>
 </ul>
-<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1089 428%22/%3E" data-src="assets/fig/w4_16_prc.jpg" width="1089" height="428" alt="W4 p16 · PR curve (AP = 0.99, 점선 = prevalence 0.37)"><figcaption>W4 p16 · PR curve. AP는 0.99이고, 점선은 prevalence 0.37이다.</figcaption></figure>
+<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1089 428%22/%3E" data-src="assets/fig/w4_16_prc.webp" width="1089" height="428" alt="W4 p16 · PR curve (AP = 0.99, 점선 = prevalence 0.37)"><figcaption>W4 p16 · PR curve. AP는 0.99이고, 점선은 prevalence 0.37이다.</figcaption></figure>
 <details class="qa"><summary>What if we have 1 positive sample and 99 negative samples? (슬라이드 질문)</summary><div class="ans">
 <p>"항상 negative"라고만 하는 쓸모없는 모델도 accuracy가 99/100 = 99%다.</p>
 <p>하지만 positive를 하나도 못 잡으므로 recall = 0/1 = 0이다. positive라고 판정한 샘플이 없어 TP + FP = 0이므로, precision은 0/0이 되어 정의할 수 없다. 0으로 처리하기도 한다.</p>
@@ -2984,7 +2984,7 @@ $$F1=\frac{2\cdot\text{Precision}\cdot\text{Recall}}{\text{Precision}+\text{Reca
 <li>예를 들어 mean area는 SD가 352나 된다. <span class="mini">(4.2 (3/5), (5/5))</span></li>
 <li>PCA는 label을 보지 않는다(unsupervised). 그런데도 PC1–PC2 평면에서 malignant와 benign이 서로 다른 곳에 놓인다.</li>
 </ul>
-<figure class="fig" style="max-width:440px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 473 408%22/%3E" data-src="assets/fig/w51_05_pca.jpg" width="473" height="408" alt="W5-1 p5 · 같은 데이터, 새 축: PC1 = 분산 최대 방향, PC2 ⟂ PC1"><figcaption>W5-1 p5 · 같은 데이터에 새 축을 잡는다. PC1은 분산이 최대인 방향이고, PC2는 PC1에 수직이다.</figcaption></figure>
+<figure class="fig" style="max-width:440px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 473 408%22/%3E" data-src="assets/fig/w51_05_pca.webp" width="473" height="408" alt="W5-1 p5 · 같은 데이터, 새 축: PC1 = 분산 최대 방향, PC2 ⟂ PC1"><figcaption>W5-1 p5 · 같은 데이터에 새 축을 잡는다. PC1은 분산이 최대인 방향이고, PC2는 PC1에 수직이다.</figcaption></figure>
 <div class="box easy"><span class="bt">🔰 쉽게 말하면</span>
 <p>점들이 비스듬한 럭비공(타원) 모양으로 퍼져 있다고 하자. 원래 가로축과 세로축으로 보면 둘 다 "적당히" 퍼져 있다. 하지만 럭비공의 <b>긴 방향</b>으로 자를 대면 점들이 가장 넓게 퍼져 보인다.</p>
 <p>PCA는 이 방향을 첫 번째 새 자(PC1)로 삼는다. 그리고 그와 직각인 방향 중 가장 넓게 퍼진 쪽을 두 번째 자(PC2)로 삼는다.</p>
@@ -3035,7 +3035,7 @@ $$z_{ij}=\frac{x_{ij}-\mu_j}{\sigma_j}$$
 <p>feature(열) j마다 평균을 빼고 SD로 나눈다. 그러면 모든 feature가 <b>평균 0, SD 1</b>이 된다.</p>
 <p class="mini">실습에서 <code>X_scaled.mean(axis=0)</code>을 계산하면 0, <code>.std(axis=0)</code>을 계산하면 1이 나온다.</p>
 </div></div>
-<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W5_1-07.jpg" width="1100" height="619" alt="W5-1 p7 · 표준화 전 PC1은 큰 단위 축 x1 하나(분산 97%), 표준화 후 PC1은 대각선 방향(79%)"><figcaption>W5-1 p7 · 표준화 전에는 PC1이 큰 단위 축 $x_1$ 하나와 거의 같다(분산 97%). 표준화 후에는 PC1이 두 feature가 함께 변하는 대각선 방향이 된다(79%).</figcaption></figure>
+<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W5_1-07.webp" width="1100" height="619" alt="W5-1 p7 · 표준화 전 PC1은 큰 단위 축 x1 하나(분산 97%), 표준화 후 PC1은 대각선 방향(79%)"><figcaption>W5-1 p7 · 표준화 전에는 PC1이 큰 단위 축 $x_1$ 하나와 거의 같다(분산 97%). 표준화 후에는 PC1이 두 feature가 함께 변하는 대각선 방향이 된다(79%).</figcaption></figure>
 <div class="box easy"><span class="bt">🔰 쉽게 말하면</span>
 <p>사람들을 키와 몸무게로 비교한다고 하자. 키를 cm 대신 mm로 적으면 키 숫자가 10배가 되어, 흩어짐도 훨씬 커 보인다.</p>
 <p>PCA는 많이 흩어진 쪽을 중요하다고 믿는다. 그래서 <b>단위만 바꿨는데 결론이 바뀐다</b>.</p>
@@ -3113,7 +3113,7 @@ $$\mathrm{proj}_{\mathbf u}(\mathbf a)=\frac{\mathbf a\cdot\mathbf u}{\mathbf u\
 <h3>4.3 벡터 사영(projection) <span class="part">(2/2)</span> <span class="src">W5-1 p12</span></h3>
 <p>PCA에서는 $\mathbf u$ 자리에 PC 방향 $\mathbf w_1$이 들어간다. 샘플 i의 PC1 score는 $z_{i1}=\mathbf x_i\cdot\mathbf w_1$이다.</p>
 <p>모든 샘플을 앞의 k개 PC에 한꺼번에 사영하면 $\mathbf Z=\mathbf X\mathbf V_k\in\mathbb R^{n\times k}$가 된다.</p>
-<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W5_1-12.jpg" width="1100" height="619" alt="W5-1 p12 · 원래 feature 공간에서 점을 PC1 선에 수직으로 내린 위치가 PC1 score, 오른쪽은 PC score 공간"><figcaption>W5-1 p12 · 왼쪽: 점 $\mathbf x_i$를 PC1 선에 수직으로 내린 위치가 $z_{i1}=\mathbf x_i\cdot\mathbf w_1$이다. 오른쪽: 새 좌표 $(z_{i1},z_{i2})$로 다시 그린 PC 공간이다. toy 예에서 var(PC1) = 2.04, var(PC2) = 0.29다.</figcaption></figure>
+<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W5_1-12.webp" width="1100" height="619" alt="W5-1 p12 · 원래 feature 공간에서 점을 PC1 선에 수직으로 내린 위치가 PC1 score, 오른쪽은 PC score 공간"><figcaption>W5-1 p12 · 왼쪽: 점 $\mathbf x_i$를 PC1 선에 수직으로 내린 위치가 $z_{i1}=\mathbf x_i\cdot\mathbf w_1$이다. 오른쪽: 새 좌표 $(z_{i1},z_{i2})$로 다시 그린 PC 공간이다. toy 예에서 var(PC1) = 2.04, var(PC2) = 0.29다.</figcaption></figure>
 <div class="box purpose"><span class="bt">🎯 왜 쓰나 · 언제 쓰나</span>
 <p>사영은 PCA의 <b>계산 그 자체</b>다. 30차원 점 하나를 PC 축 위의 숫자 몇 개(score)로 바꾸는 방법이 내적이다. 버린 축 방향의 성분, 즉 잔차가 곧 잃은 정보다.</p>
 <p>새 샘플도 기존 데이터의 평균과 SD로 먼저 표준화한 뒤 같은 $\mathbf W$로 사영하면, 같은 PC 좌표계에 놓을 수 있다. <span class="tag add">자료 외 보충</span> PCA는 데이터에 고정된 행렬을 곱하는 것이라 곱셈 한 번으로 끝난다.</p>
@@ -3188,7 +3188,7 @@ $$\|\mathbf x\|^2=(\mathbf x\cdot\mathbf v)^2+\|\mathbf x-(\mathbf x\cdot\mathbf
 <div class="card">
 <h3>4.5 SVD, PC score, explained variance <span class="part">(1/3)</span> <span class="src">W5-1 p6, p11–13 · 실습 W5 3.2</span></h3>
 $$\mathbf X=\mathbf U\boldsymbol\Sigma\mathbf V^T=\sum_k\sigma_k\,\mathbf u_k\mathbf v_k^T$$
-<figure class="fig" style="max-width:780px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 471%22/%3E" data-src="assets/fig/w51_11_svd.jpg" width="1067" height="471" alt="W5-1 p11 · SVD: X = UΣVᵀ, Vᵀ의 행 = principal components"><figcaption>W5-1 p11 · SVD는 X = UΣVᵀ이고, Vᵀ의 행이 principal components다.</figcaption></figure>
+<figure class="fig" style="max-width:780px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 471%22/%3E" data-src="assets/fig/w51_11_svd.webp" width="1067" height="471" alt="W5-1 p11 · SVD: X = UΣVᵀ, Vᵀ의 행 = principal components"><figcaption>W5-1 p11 · SVD는 X = UΣVᵀ이고, Vᵀ의 행이 principal components다.</figcaption></figure>
 <ul>
 <li>SVD는 <b>모든(any) 행렬</b>에 대해 가능하다.</li>
 <li>$\mathbf U$는 $n\times n$ 행렬이며, 그 열은 왼쪽 특이벡터(left singular vectors)다.</li>
@@ -3218,7 +3218,7 @@ $$\mathrm{Var}(\mathbf X\mathbf v_k)=\frac{\|\sigma_k\mathbf u_k\|^2}{n-1}=\frac
 <p>비율로 만들면 $n-1$이 약분되어 $\sigma_k^2/\sum_i\sigma_i^2$가 된다.</p>
 <p>p13 그림 범례는 이 비율을 $\lambda_k/\sum\lambda$로 쓴다. 여기서 $\lambda_k=\sigma_k^2/(n-1)$은 공분산 행렬의 고윳값이므로, <b>같은 비율</b>이다.</p>
 <p>또 PC score는 $\mathbf Z=\mathbf X\mathbf V_k=\mathbf U_k\boldsymbol\Sigma_k$로도 쓸 수 있다.</p></div>
-<figure class="fig" style="max-width:500px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 506 359%22/%3E" data-src="assets/fig/w51_13_ev.jpg" width="506" height="359" alt="W5-1 p13 · breast cancer explained variance ratio (PC1 44%, 누적 10개에서 95%)"><figcaption>W5-1 p13 · 유방암 데이터의 explained variance ratio. PC1이 44%이고, 누적 10개에서 95%에 이른다.</figcaption></figure>
+<figure class="fig" style="max-width:500px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 506 359%22/%3E" data-src="assets/fig/w51_13_ev.webp" width="506" height="359" alt="W5-1 p13 · breast cancer explained variance ratio (PC1 44%, 누적 10개에서 95%)"><figcaption>W5-1 p13 · 유방암 데이터의 explained variance ratio. PC1이 44%이고, 누적 10개에서 95%에 이른다.</figcaption></figure>
 <div class="tbl"><table>
 <tr><th>breast cancer (표준화 후)</th><th>값</th></tr>
 <tr><td>explained variance ratio PC1, PC2</td><td>0.443, 0.190 (합 63.2%)</td></tr>
@@ -3275,7 +3275,7 @@ $$w=\exp\!\Big(-\frac{d-\rho_i}{\sigma_i}\Big)$$
 여기서 $\rho_i$는 가장 가까운 이웃까지의 거리(distance to nearest neighbor)다. 그래서 가장 가까운 이웃의 w는 항상 1이다.
 점마다 자기 스케일($\rho_i,\sigma_i$)로 정규화하므로, 밀집 영역과 희박 영역이 비슷하게 보인다.
 여기서 $\sigma_i$는 표준편차나 특잇값이 아니다. 점 i마다 따로 정하는 거리 눈금으로, 곡선이 얼마나 빨리 떨어지는지를 정한다.</li>
-</ol><figure class="fig" style="max-width:860px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 322%22/%3E" data-src="assets/fig/w51_16_umap1.jpg" width="1067" height="322" alt="W5-1 p16 · Step 1: 이웃 그래프, 점마다 ρᵢ로 정규화한 edge weight"><figcaption>W5-1 p16 · Step 1: 이웃 그래프. edge weight는 점마다 ρᵢ로 정규화한다.</figcaption></figure>
+</ol><figure class="fig" style="max-width:860px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 322%22/%3E" data-src="assets/fig/w51_16_umap1.webp" width="1067" height="322" alt="W5-1 p16 · Step 1: 이웃 그래프, 점마다 ρᵢ로 정규화한 edge weight"><figcaption>W5-1 p16 · Step 1: 이웃 그래프. edge weight는 점마다 ρᵢ로 정규화한다.</figcaption></figure>
 </div>
 </section>
 
@@ -3305,7 +3305,7 @@ $$w=\exp\!\Big(-\frac{d-\rho_i}{\sigma_i}\Big)$$
 <h3>4.6 UMAP: 같은 데이터, 축 없음 <span class="part">(3/6)</span> <span class="tag must">3단계 설명</span><span class="src">W5-1 p14–20 · W5-2 p3–5</span></h3><ol class="steps" style="counter-reset:st 1">
 <li><b>2D 평면에 점을 떨어뜨린다.</b> 먼저 spectral layout으로 초기화해, 연결된 점끼리 가까이서 시작하게 한다. 2D에서 "이웃"의 정도는 다음 식으로 정의한다.
 $$v'=\begin{cases}1 & d\le d_{min}\\ e^{-(d-d_{min})} & d\gt d_{min}\end{cases}\qquad v=\frac1{1+a\,d^{2b}}$$
-$a$와 $b$는 $v$가 $v'$에 가까워지도록 맞춘(fitted) 상수다.<figure class="fig" style="max-width:860px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1089 313%22/%3E" data-src="assets/fig/w51_17_umap2.jpg" width="1089" height="313" alt="W5-1 p17 · Step 2: spectral 초기화와 2D 유사도 v (min_dist까지 평평)"><figcaption>W5-1 p17 · Step 2: spectral 초기화와 2D 유사도 v. v는 min_dist까지 평평하다.</figcaption></figure>
+$a$와 $b$는 $v$가 $v'$에 가까워지도록 맞춘(fitted) 상수다.<figure class="fig" style="max-width:860px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1089 313%22/%3E" data-src="assets/fig/w51_17_umap2.webp" width="1089" height="313" alt="W5-1 p17 · Step 2: spectral 초기화와 2D 유사도 v (min_dist까지 평평)"><figcaption>W5-1 p17 · Step 2: spectral 초기화와 2D 유사도 v. v는 min_dist까지 평평하다.</figcaption></figure>
 <p class="mini">$v'$는 $d_{min}$(= <code>min_dist</code>)까지 1로 평평하다. 그래서 이미 min_dist보다 가까운 쌍은 충분히 가깝다고 보고 더 당기지 않는다. 그 결과 점들이 min_dist보다 촘촘하게 겹쳐 쌓이려 하지 않는다. <span class="tag inf">추론</span> 꺾인 $v'$ 대신 매끄러운 $v$를 쓰는 것은 미분(gradient)으로 최적화하기 위해서다. <span class="tag add">자료 외 보충</span></p></li>
 <li><b>두 그래프가 일치하도록 손실을 최소화한다.</b> 손실은 w 그래프와 v 그래프 사이의 cross-entropy다.
 $$L=\sum_{ij}\Big(\underbrace{w_{ij}\log\frac{w_{ij}}{v_{ij}}}_{\text{Attract}}+\underbrace{(1-w_{ij})\log\frac{1-w_{ij}}{1-v_{ij}}}_{\text{Repel}}\Big)$$
@@ -3319,7 +3319,7 @@ $$L=\sum_{ij}\Big(\underbrace{w_{ij}\log\frac{w_{ij}}{v_{ij}}}_{\text{Attract}}+
 </ul></li>
 </ol>
 
-<figure class="fig" style="max-width:860px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 403%22/%3E" data-src="assets/fig/w51_18_umap3.jpg" width="1067" height="403" alt="W5-1 p18 · Step 3: cross-entropy로 당기고(attract) 밀어내며(repel) 배치를 최적화"><figcaption>W5-1 p18 · Step 3: cross-entropy를 줄이도록 당기고(attract) 밀어내며(repel) 배치를 최적화한다.</figcaption></figure>
+<figure class="fig" style="max-width:860px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 403%22/%3E" data-src="assets/fig/w51_18_umap3.webp" width="1067" height="403" alt="W5-1 p18 · Step 3: cross-entropy로 당기고(attract) 밀어내며(repel) 배치를 최적화"><figcaption>W5-1 p18 · Step 3: cross-entropy를 줄이도록 당기고(attract) 밀어내며(repel) 배치를 최적화한다.</figcaption></figure>
 </div>
 </section>
 
@@ -3330,7 +3330,7 @@ $$L=\sum_{ij}\Big(\underbrace{w_{ij}\log\frac{w_{ij}}{v_{ij}}}_{\text{Attract}}+
 <tr><td><code>n_neighbors</code> (local vs global)</td><td>5: 가장 가까운 몇 개만 본다. 세부는 보이지만 데이터가 가닥으로 조각난다.</td><td>100: 멀리까지 본다. 전체 모양은 유지되지만 국소 구조는 뭉개진다.</td></tr>
 <tr><td><code>min_dist</code> (덩어리 촘촘함)</td><td>0.0: 이웃이 거의 겹쳐 쌓인다.</td><td>0.9: 점들이 고르게 퍼진다.</td></tr>
 </table></div>
-<figure class="fig" style="max-width:560px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 616 508%22/%3E" data-src="assets/fig/w52_04_params.jpg" width="616" height="508" alt="W5-2 p4 · n_neighbors(5 vs 100)와 min_dist(0.0 vs 0.9)에 따른 UMAP 그림"><figcaption>W5-2 p4 · n_neighbors(5와 100)와 min_dist(0.0과 0.9)에 따라 달라지는 UMAP 그림</figcaption></figure>
+<figure class="fig" style="max-width:560px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 616 508%22/%3E" data-src="assets/fig/w52_04_params.webp" width="616" height="508" alt="W5-2 p4 · n_neighbors(5 vs 100)와 min_dist(0.0 vs 0.9)에 따른 UMAP 그림"><figcaption>W5-2 p4 · n_neighbors(5와 100)와 min_dist(0.0과 0.9)에 따라 달라지는 UMAP 그림</figcaption></figure>
 <div class="box key"><span class="bt">두 파라미터는 서로 다른 단계를 바꾼다</span>
 <p><b><code>n_neighbors</code>는 Step 1(고차원 그래프)을 바꾼다.</b> 이 값은 이웃을 몇 개까지 연결할지를 정한다.</p>
 <p>값이 작으면 각 점이 가까운 몇 개와만 연결되어, 그래프가 끊어진 조각들로 나뉜다. 그래서 그림이 가닥으로 쪼개진다. <span class="tag inf">추론</span></p>
@@ -3487,7 +3487,7 @@ $$d_i=\sqrt{\sum_{j=1}^{p}\big(x^{j}_{new}-x^{j}_{i}\big)^2}$$</li>
 <li>k=1의 train 1.00은 각 점이 자기 자신의 최근접 이웃이기 때문이다. 이 값은 새 샘플에 대해 아무것도 말해 주지 않는다.</li>
 </ul>
 
-<figure class="fig" style="max-width:860px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 496%22/%3E" data-src="assets/fig/w52_13_knn.jpg" width="1067" height="496" alt="W5-2 p13 · k = 1, 15, 150의 결정경계 (overfit, 적당, underfit)"><figcaption>W5-2 p13 · k = 1, 15, 150의 결정경계. 각각 overfit, 적당함, underfit에 해당한다.</figcaption></figure>
+<figure class="fig" style="max-width:860px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 496%22/%3E" data-src="assets/fig/w52_13_knn.webp" width="1067" height="496" alt="W5-2 p13 · k = 1, 15, 150의 결정경계 (overfit, 적당, underfit)"><figcaption>W5-2 p13 · k = 1, 15, 150의 결정경계. 각각 overfit, 적당함, underfit에 해당한다.</figcaption></figure>
 <div class="box easy"><span class="bt">🔰 쉽게 말하면</span>
 <p>새 환자의 세포 측정값이 들어오면, 이미 진단이 붙은 기존 환자 중 측정값이 가장 비슷한 k명을 찾는다. 그리고 그들 진단의 다수결을 따른다.</p>
 <p>"비슷하다"는 30개 측정값의 차이를 제곱해 더한 뒤 루트를 씌운 거리가 작다는 뜻이다.</p>
@@ -3545,7 +3545,7 @@ $$d_i=\sqrt{\sum_{j=1}^{p}\big(x^{j}_{new}-x^{j}_{i}\big)^2}$$</li>
 
 <section class="slide" id="c4-13" data-ch="c4" data-title="4.9 k-NN과 cross-validation (4/6)">
 <div class="card">
-<h3>4.9 k-NN과 cross-validation <span class="part">(4/6)</span> <span class="src">W5-2 p8–15 · notebook 5</span></h3><h4>Cross-validation으로 k 고르기</h4><figure class="fig" style="max-width:780px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 935 464%22/%3E" data-src="assets/fig/w52_14_cv.jpg" width="935" height="464" alt="W5-2 p14 · 5-fold cross-validation (test set은 마지막에 한 번만)"><figcaption>W5-2 p14 · 5-fold cross-validation. test set은 마지막에 한 번만 쓴다.</figcaption></figure>
+<h3>4.9 k-NN과 cross-validation <span class="part">(4/6)</span> <span class="src">W5-2 p8–15 · notebook 5</span></h3><h4>Cross-validation으로 k 고르기</h4><figure class="fig" style="max-width:780px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 935 464%22/%3E" data-src="assets/fig/w52_14_cv.webp" width="935" height="464" alt="W5-2 p14 · 5-fold cross-validation (test set은 마지막에 한 번만)"><figcaption>W5-2 p14 · 5-fold cross-validation. test set은 마지막에 한 번만 쓴다.</figcaption></figure>
 
 <ul>
 <li>test set은 손대지 않는다. <b>training set 안에서</b> 데이터를 5개 fold로 나눈다.</li>
@@ -3554,7 +3554,7 @@ $$d_i=\sqrt{\sum_{j=1}^{p}\big(x^{j}_{new}-x^{j}_{i}\big)^2}$$</li>
 <li>test set은 <b>마지막에 단 한 번</b>만 쓴다. k=9의 test accuracy는 0.947이다.</li>
 <li>왜 test로 k를 고르면 안 되나? test로 고르면 test가 더 이상 "본 적 없는 데이터"가 아니다. 모델 선택에 test 정보가 새어 들어가, 성능이 낙관적으로 부풀려진다.</li>
 </ul>
-<figure class="fig" style="max-width:760px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W5_2-15.jpg" width="1100" height="619" alt="W5-2 p15 · k에 따른 training accuracy(1.00에서 감소), 5-fold CV accuracy(k=9에서 최고), test accuracy"><figcaption>W5-2 p15 · training accuracy는 k=1에서 1.00이고 k가 커질수록 대체로 감소한다. CV accuracy는 k=9에서 가장 높고, test는 참고용이다.</figcaption></figure>
+<figure class="fig" style="max-width:760px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W5_2-15.webp" width="1100" height="619" alt="W5-2 p15 · k에 따른 training accuracy(1.00에서 감소), 5-fold CV accuracy(k=9에서 최고), test accuracy"><figcaption>W5-2 p15 · training accuracy는 k=1에서 1.00이고 k가 커질수록 대체로 감소한다. CV accuracy는 k=9에서 가장 높고, test는 참고용이다.</figcaption></figure>
 </div>
 </section>
 
@@ -3612,7 +3612,7 @@ $$d_i=\sqrt{\sum_{j=1}^{p}\big(x^{j}_{new}-x^{j}_{i}\big)^2}$$</li>
 <li><b>갱신</b>: centroid를 소속 샘플의 평균으로 옮긴다. 그리고 2단계로 돌아가며, 클러스터가 더 이상 바뀌지 않으면 멈춘다.</li>
 </ol>
 
-<div class="figs2"><figure class="fig"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 440 427%22/%3E" data-src="assets/fig/w52_19_assign.jpg" width="440" height="427" alt="W5-2 p19 · Step 2 할당: 가장 가까운 centroid로 (경계 = 직선)"><figcaption>W5-2 p19 · Step 2 할당: 각 샘플을 가장 가까운 centroid로 보낸다. 경계는 직선이다.</figcaption></figure><figure class="fig"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 429 390%22/%3E" data-src="assets/fig/w52_20_update.jpg" width="429" height="390" alt="W5-2 p20 · Step 3 갱신: centroid를 소속 샘플 평균으로 이동"><figcaption>W5-2 p20 · Step 3 갱신: centroid를 소속 샘플의 평균으로 옮긴다.</figcaption></figure></div>
+<div class="figs2"><figure class="fig"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 440 427%22/%3E" data-src="assets/fig/w52_19_assign.webp" width="440" height="427" alt="W5-2 p19 · Step 2 할당: 가장 가까운 centroid로 (경계 = 직선)"><figcaption>W5-2 p19 · Step 2 할당: 각 샘플을 가장 가까운 centroid로 보낸다. 경계는 직선이다.</figcaption></figure><figure class="fig"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 429 390%22/%3E" data-src="assets/fig/w52_20_update.webp" width="429" height="390" alt="W5-2 p20 · Step 3 갱신: centroid를 소속 샘플 평균으로 이동"><figcaption>W5-2 p20 · Step 3 갱신: centroid를 소속 샘플의 평균으로 옮긴다.</figcaption></figure></div>
 </div>
 </section>
 
@@ -3652,7 +3652,7 @@ $$d_i=\sqrt{\sum_{j=1}^{p}\big(x^{j}_{new}-x^{j}_{i}\big)^2}$$</li>
 <div class="card">
 <h3>4.10 k-means: 어떻게 작동하나 <span class="part">(3/5)</span> <span class="tag must">교수님 예시 문제</span><span class="src">W5-2 p16–21 · notebook 6</span></h3><h4>무엇을 최적화하나: within-cluster sum of squares</h4>
 $$\text{Inertia}=J=\sum_{i=1}^{k}\sum_{\mathbf x\in C_i}\|\mathbf x-\boldsymbol\mu_i\|^2$$
-<figure class="fig" style="max-width:860px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 495%22/%3E" data-src="assets/fig/w52_21_obj.jpg" width="1100" height="495" alt="W5-2 p21 · inertia는 반복해도 늘지 않는다 (objective never goes up)"><figcaption>W5-2 p21 · inertia는 반복할 때마다 줄거나 그대로이며, 늘지 않는다(objective never goes up).</figcaption></figure>
+<figure class="fig" style="max-width:860px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 495%22/%3E" data-src="assets/fig/w52_21_obj.webp" width="1100" height="495" alt="W5-2 p21 · inertia는 반복해도 늘지 않는다 (objective never goes up)"><figcaption>W5-2 p21 · inertia는 반복할 때마다 줄거나 그대로이며, 늘지 않는다(objective never goes up).</figcaption></figure>
 <div class="box key"><span class="bt">왜 J가 절대 증가하지 않나 (objective never goes up) <span class="tag add">자료 외 보충</span></span>
 <p>두 단계가 각각 J를 한 종류의 변수에 대해 최소화한다.</p>
 <p><b>할당 단계</b>: centroid를 고정하고 각 점을 가장 가까운 centroid로 옮긴다. 그러면 그 점의 $\|\mathbf x-\boldsymbol\mu\|^2$ 항은 줄거나 같다.</p>
@@ -3716,7 +3716,7 @@ $$\frac{\partial}{\partial\mathbf c}\sum_{\mathbf x\in C}\|\mathbf x-\mathbf c\|
 <li>단, <b>최적 inertia는 k가 커질수록 줄어들기만 하고</b>, k=n이면 0이 된다. 그래서 inertia 최솟값으로는 k를 고를 수 없다.</li>
 <li>실제 실행에서는 local minimum 때문에 드물게 예외가 생긴다. <span class="tag add">자료 외 보충</span></li>
 <li><b>Silhouette</b>: 각 샘플이 가장 가까운 다른 클러스터보다 자기 클러스터에 얼마나 더 가까운지를 나타낸다. 값의 범위는 −1에서 1이다.</li>
-</ul><figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 458%22/%3E" data-src="assets/fig/w52_23_sil.jpg" width="1067" height="458" alt="W5-2 p23 · k별 silhouette score (k = 2에서 최대)"><figcaption>W5-2 p23 · k별 silhouette score. k = 2에서 가장 크다.</figcaption></figure>
+</ul><figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 458%22/%3E" data-src="assets/fig/w52_23_sil.webp" width="1067" height="458" alt="W5-2 p23 · k별 silhouette score (k = 2에서 최대)"><figcaption>W5-2 p23 · k별 silhouette score. k = 2에서 가장 크다.</figcaption></figure>
 
 $$a(i)=\frac1{|C_i|-1}\sum_{j\in C_i,\,j\ne i}d(i,j),\qquad b(i)=\min_{k\ne i}\frac1{|C_k|}\sum_{j\in C_k}d(i,j)$$
 <p>$a(i)$는 자기 클러스터 안의 다른 점들까지의 평균 거리(mean distance to own cluster)다.</p>
@@ -3776,7 +3776,7 @@ $$s(i)=\frac{b(i)-a(i)}{\max\{a(i),b(i)\}}$$
 <p>마지막 가정 때문에 노이즈나 outlier가 centroid를 끌어당긴다.</p>
 <p>또 Euclidean 거리를 쓰므로 <b>표준화가 중요</b>하다. 표준화하면 진단과 91%가 일치하고 불일치는 54개다. raw feature를 쓰면 85%가 일치하고 불일치는 83개다.</p>
 <p>raw에서는 SD가 수백인 area류 feature가 거리를 지배하기 때문이다.</p></div>
-<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W5_2-24.jpg" width="1100" height="619" alt="W5-2 p24 · k-means가 실패하는 세 경우: 휘어진 모양, 퍼짐이 크게 다른 클러스터, 길쭉한 클러스터"><figcaption>W5-2 p24 · 실패 예 세 가지. curved shapes에서는 초승달 둘을 직선으로 자른다. very different spreads에서는 넓은 그룹의 점을 좁은 그룹이 가져간다. elongated clusters에서는 길쭉한 띠 모양 그룹을 가로질러 자른다.</figcaption></figure>
+<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W5_2-24.webp" width="1100" height="619" alt="W5-2 p24 · k-means가 실패하는 세 경우: 휘어진 모양, 퍼짐이 크게 다른 클러스터, 길쭉한 클러스터"><figcaption>W5-2 p24 · 실패 예 세 가지. curved shapes에서는 초승달 둘을 직선으로 자른다. very different spreads에서는 넓은 그룹의 점을 좁은 그룹이 가져간다. elongated clusters에서는 길쭉한 띠 모양 그룹을 가로질러 자른다.</figcaption></figure>
 <div class="box key"><span class="bt">왜 이런 가정이 생기나 — 알고리즘 구조에서 <span class="tag inf">추론</span></span>
 <ul>
 <li><b>둥근 모양</b>: 각 클러스터를 점 하나(centroid)와, 모든 방향에 똑같은 Euclidean 거리로 대표한다. 그래서 경계가 두 centroid의 수직이등분선이 된다.</li>
@@ -3947,7 +3947,7 @@ $$\|X\mathbf v_k\|^2/(n-1)=\sigma_k^2/(n-1)$$
 <li><b>형광(fluorescence) 영상은 그냥 grayscale</b>이다. 현미경은 강도값만 준다.</li>
 <li>논문 속 초록색(GFP)은 시각화를 위해 색을 입힌 것일 뿐이다. 데이터는 같고 표시만 다르다.</li>
 </ul>
-<figure class="fig" style="max-width:860px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 310%22/%3E" data-src="assets/fig/w7_08_color.jpg" width="1067" height="310" alt="W7 p8 · RGB 영상 = 채널 3개의 grayscale 영상"><figcaption>W7 p8 · RGB 영상은 grayscale 영상 3개를 채널로 쌓은 것이다</figcaption></figure>
+<figure class="fig" style="max-width:860px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1067 310%22/%3E" data-src="assets/fig/w7_08_color.webp" width="1067" height="310" alt="W7 p8 · RGB 영상 = 채널 3개의 grayscale 영상"><figcaption>W7 p8 · RGB 영상은 grayscale 영상 3개를 채널로 쌓은 것이다</figcaption></figure>
 </div>
 </section>
 
@@ -3959,7 +3959,7 @@ $$\|X\mathbf v_k\|^2/(n-1)=\sigma_k^2/(n-1)$$
 위치는 위에서 몇 번째 줄(행)인지를 먼저 말하고, 왼쪽에서 몇 번째 칸(열)인지를 나중에 말한다. 번호는 <b>0부터</b> 센다.<br>
 예를 들어 아래 8×8 조각에서 <code>img[3, 5]</code>는 위에서 4번째 줄, 왼쪽에서 6번째 칸이며, 값은 93이다.<br>
 같은 넓이를 더 촘촘한 모눈으로 찍으면 칸 수가 늘어나 배열이 커진다. 촘촘하다는 것은 칸 하나가 덮는 실제 길이가 더 짧다는 뜻이다.</div>
-<figure class="fig" style="max-width:640px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W7-06.jpg" width="1100" height="619" alt="W7 p6 · 8×8 patch의 실제 숫자: img[3, 5] = 93, img[1:5, 2:4]는 4×2 patch"><figcaption>W7 p6 · 8×8 patch의 실제 숫자. 3번 행(4번째 줄), 5번 열(6번째 칸)의 값이 93이다</figcaption></figure>
+<figure class="fig" style="max-width:640px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W7-06.webp" width="1100" height="619" alt="W7 p6 · 8×8 patch의 실제 숫자: img[3, 5] = 93, img[1:5, 2:4]는 4×2 patch"><figcaption>W7 p6 · 8×8 patch의 실제 숫자. 3번 행(4번째 줄), 5번 열(6번째 칸)의 값이 93이다</figcaption></figure>
 </div>
 </section>
 
@@ -4036,7 +4036,7 @@ uint8은 자동차 주행거리계처럼 끝(255)을 넘으면 0부터 다시 �
 <li>x 범위에서 dtype을, 양 끝에서 min/max를, 분포의 중심에서 평균을, 폭에서 SD를 한눈에 읽는다.</li>
 <li>코드는 <code>np.bincount(img.ravel(), minlength=256)</code>이다. 막대 높이를 모두 더하면 전체 픽셀 수가 된다.</li>
 </ul>
-<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1034 344%22/%3E" data-src="assets/fig/w7_11_hist.jpg" width="1034" height="344" alt="W7 p11 · 영상과 그 histogram (x: 강도 k, y: 값이 k인 픽셀 수)"><figcaption>W7 p11 · 영상과 그 histogram. x축은 강도 k, y축은 값이 k인 픽셀 수다</figcaption></figure>
+<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1034 344%22/%3E" data-src="assets/fig/w7_11_hist.webp" width="1034" height="344" alt="W7 p11 · 영상과 그 histogram (x: 강도 k, y: 값이 k인 픽셀 수)"><figcaption>W7 p11 · 영상과 그 histogram. x축은 강도 k, y축은 값이 k인 픽셀 수다</figcaption></figure>
 </div>
 </section>
 
@@ -4091,7 +4091,7 @@ uint8은 자동차 주행거리계처럼 끝(255)을 넘으면 0부터 다시 �
 <div class="box key" style="margin:0"><span class="bt">Brightness</span>밝은 영상은 픽셀이 전반적으로 더 흰색이다. 즉 값이 전반적으로 크다(255가 흰색, 0이 검정). 따라서 <b>평균 픽셀값이 크고</b>, 히스토그램은 오른쪽으로 이동한다.</div>
 <div class="box key" style="margin:0"><span class="bt">Contrast</span>대비가 높은(sharper) 영상은 픽셀들을 더 뚜렷이 구분할 수 있다. 예를 들어 경계와 세포 내부가 잘 갈린다. 이는 분포가 넓다는 뜻이고, 따라서 <b>픽셀값의 SD가 크다</b>. 예를 들어 0–100 범위는 값 차이가 100이고, 95–105 범위는 차이가 10이다. 그래서 0–100 영상이 더 뚜렷하게 보이고, 대비가 높다.</div>
 </div>
-<figure class="fig" style="max-width:600px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W7-13.jpg" width="1100" height="619" alt="W7 p13 · 낮은 대비(히스토그램이 한 곳에 좁게) vs 높은 대비(전 범위로 퍼짐)"><figcaption>W7 p13 · 낮은 대비는 히스토그램이 좁아 물체와 배경을 구분하기 어렵다. 높은 대비는 히스토그램이 넓게 퍼진다</figcaption></figure>
+<figure class="fig" style="max-width:600px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W7-13.webp" width="1100" height="619" alt="W7 p13 · 낮은 대비(히스토그램이 한 곳에 좁게) vs 높은 대비(전 범위로 퍼짐)"><figcaption>W7 p13 · 낮은 대비는 히스토그램이 좁아 물체와 배경을 구분하기 어렵다. 높은 대비는 히스토그램이 넓게 퍼진다</figcaption></figure>
 <div class="box easy"><span class="bt">🔰 쉽게 말하면</span>
 <b>밝기</b>는 픽셀 숫자들의 평균이 얼마나 큰가이고, <b>대비</b>는 숫자들이 얼마나 넓게 퍼져 있는가다.<br>
 예를 들어 A = [95, 100, 105]와 B = [0, 100, 200]은 둘 다 평균이 100이라 밝기가 같다. 하지만 B가 훨씬 넓게 퍼져 있다(SD: A ≈ 4.1, B ≈ 81.6). 그래서 B는 어두운 곳과 밝은 곳이 뚜렷이 갈리고, 대비가 높다.<br>
@@ -4143,7 +4143,7 @@ $$s=T(r)$$<p style="text-align:center">$r$은 입력 강도(input intensity), �
 <li><b>clip</b>(f(x), min, max)은 f(x)가 min보다 작으면 min을, max 이상이면 max를, 그 사이면 f(x)를 돌려준다.</li>
 <li>clip은 출력이 유효 범위(0–255 또는 0–65535)를 벗어나지 않게 한다. 그래서 point operation에 꼭 필요하다.</li>
 </ul>
-<figure class="fig" style="max-width:640px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W7-14.jpg" width="1100" height="619" alt="W7 p14 · s = T(r) 그래프: s = r + 60은 255에서, s = r − 60은 0에서 평평해짐(clip)"><figcaption>W7 p14 · T를 그래프로 그리면 s = r + 60(주황)은 255에서, s = r − 60(파랑)은 0에서 평평해진다. 이것이 clip이다</figcaption></figure>
+<figure class="fig" style="max-width:640px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W7-14.webp" width="1100" height="619" alt="W7 p14 · s = T(r) 그래프: s = r + 60은 255에서, s = r − 60은 0에서 평평해짐(clip)"><figcaption>W7 p14 · T를 그래프로 그리면 s = r + 60(주황)은 255에서, s = r − 60(파랑)은 0에서 평평해진다. 이것이 clip이다</figcaption></figure>
 <div class="box easy"><span class="bt">🔰 쉽게 말하면</span>
 point operation은 "숫자 바꾸기 규칙"을 모든 칸에 똑같이 적용하는 것이다. 규칙은 <b>그 칸의 숫자만 보고</b> 정하고, 옆 칸은 보지 않는다.<br>
 예를 들어 규칙이 T(r) = r + 60이면, 100인 칸은 영상 어디에 있든 160이 된다.<br>
@@ -4195,7 +4195,7 @@ $$\textbf{Brightness: }\ s=\mathrm{clip}(r+\beta,\ 0,\ L-1)$$
 <li>교수님은 이것이 휴대폰 사진 앱 뒤에서 실제로 일어나는 일이라고 했다. <span class="mini">("That's what's actually happening behind your iPhone or Galaxy.")</span></li>
 </ul>
 
-<figure class="fig" style="max-width:640px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 748 504%22/%3E" data-src="assets/fig/w7_15_bright.jpg" width="748" height="504" alt="W7 p15 · β = −50 / 0 / +50: histogram이 이동하고 양 끝에서 clip"><figcaption>W7 p15 · β = −50, 0, +50일 때 histogram이 이동하고, 양 끝에서 clip된다</figcaption></figure>
+<figure class="fig" style="max-width:640px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 748 504%22/%3E" data-src="assets/fig/w7_15_bright.webp" width="748" height="504" alt="W7 p15 · β = −50 / 0 / +50: histogram이 이동하고 양 끝에서 clip"><figcaption>W7 p15 · β = −50, 0, +50일 때 histogram이 이동하고, 양 끝에서 clip된다</figcaption></figure>
 <div class="box easy"><span class="bt">🔰 쉽게 말하면</span>
 밝기 조정은 모든 칸의 숫자에 <b>같은 수 β를 더하는 것</b>이다. β = +10이면 50은 60이 되고, 60은 70이 된다.<br>
 그러면 막대그래프 전체가 오른쪽으로 10칸 밀리고 영상이 밝아진다. β = −10이면 왼쪽으로 밀리고 어두워진다.<br>
@@ -4237,7 +4237,7 @@ $$s=\alpha r+(1-\alpha)\mu$$</div>
 <section class="slide" id="c5-6c" data-ch="c5" data-title="5.5 Brightness / Contrast 조정 식 (4/6)">
 <div class="card">
 <h3>5.5 Brightness / Contrast 조정 식 <span class="part">(4/6)</span> <span class="src">W7 p15–16 · notebook 4</span></h3>
-<figure class="fig" style="max-width:640px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 748 504%22/%3E" data-src="assets/fig/w7_16_contrast.jpg" width="748" height="504" alt="W7 p16 · α = 0.5 / 1 / 1.8: histogram 폭이 좁아지거나 넓어짐"><figcaption>W7 p16 · α = 0.5, 1, 1.8에 따라 histogram 폭이 좁아지거나 넓어진다</figcaption></figure>
+<figure class="fig" style="max-width:640px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 748 504%22/%3E" data-src="assets/fig/w7_16_contrast.webp" width="748" height="504" alt="W7 p16 · α = 0.5 / 1 / 1.8: histogram 폭이 좁아지거나 넓어짐"><figcaption>W7 p16 · α = 0.5, 1, 1.8에 따라 histogram 폭이 좁아지거나 넓어진다</figcaption></figure>
 <ul>
 <li>α가 1보다 크면 SD가 커져 대비가 높아진다. 0&lt;α&lt;1이면 대비가 낮아지고, α=1이면 원본 그대로다.</li>
 <li>음수 α는 원하는 동작이 아니다. 교수님은 αr에 음수를 곱하면 값이 음수가 된다고 설명했다.</li>
@@ -4299,7 +4299,7 @@ $$s=\alpha r+(1-\alpha)\mu$$</div>
 <li>픽셀값 범위는 일종의 "정보 해상도"다. 그래서 목표는 <b>사용 가능한 값 범위를 최대한 다 쓰는 것</b>이고, 이상적으로는 uniform 분포다.</li>
 </ul>
 
-<figure class="fig" style="max-width:640px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 770 476%22/%3E" data-src="assets/fig/w7_17_abc.jpg" width="770" height="476" alt="W7 p17 · A(어두운 쪽에 몰림) / B(가운데 좁음) / C(전 범위) — C가 가장 디테일이 많다"><figcaption>W7 p17 · A는 어두운 쪽에 몰리고, B는 가운데에 좁고, C는 전 범위를 쓴다. C가 가장 디테일이 많다</figcaption></figure>
+<figure class="fig" style="max-width:640px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 770 476%22/%3E" data-src="assets/fig/w7_17_abc.webp" width="770" height="476" alt="W7 p17 · A(어두운 쪽에 몰림) / B(가운데 좁음) / C(전 범위) — C가 가장 디테일이 많다"><figcaption>W7 p17 · A는 어두운 쪽에 몰리고, B는 가운데에 좁고, C는 전 범위를 쓴다. C가 가장 디테일이 많다</figcaption></figure>
 <div class="box easy"><span class="bt">🔰 쉽게 말하면</span>
 영상 B의 픽셀은 256개 값 중 대략 125–185, 즉 약 60개 값만 쓴다. 막과 세포질처럼 원래 밝기가 비슷한 두 구조가 140과 145라면, 화면에서 거의 같은 회색으로 보인다.<br>
 이 좁은 범위를 0–255 전체로 넓혀 쓰면 두 구조의 값 차이가 커져, 서로 다른 회색으로 구분된다.<br>
@@ -4337,7 +4337,7 @@ $$s=a\,r+b,\qquad a=\frac{L-1}{r_{max}-r_{min}}$$</li>
 <li>실습 코드는 <code>(em − p1)/(p99 − p1)·255</code>를 계산한 뒤 clip한다. notebook에서는 56–220을 늘려 std가 61.6이 되었고, 픽셀의 2.2%가 clip되었다.</li>
 <li>표준편차로 나누는 z-score식 정규화도 있다. outlier 한 픽셀이 범위를 정하지는 않지만, 변환 후 0 미만이나 255 초과인 픽셀은 잘려 사라진다. <span class="mini">(녹음 10/14)</span></li>
 </ul>
-<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 968 347%22/%3E" data-src="assets/fig/w7_20_norm.jpg" width="968" height="347" alt="W7 p20 · min-max, 1–99 percentile stretch: 폭은 넓어지지만 bump는 그대로"><figcaption>W7 p20 · min-max와 1–99 percentile stretch. 폭은 넓어지지만 bump는 그대로다</figcaption></figure>
+<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 968 347%22/%3E" data-src="assets/fig/w7_20_norm.webp" width="968" height="347" alt="W7 p20 · min-max, 1–99 percentile stretch: 폭은 넓어지지만 bump는 그대로"><figcaption>W7 p20 · min-max와 1–99 percentile stretch. 폭은 넓어지지만 bump는 그대로다</figcaption></figure>
 <div class="box warn"><span class="bt">선형 변환의 한계</span>
 <span class="mini">교수님 질문: "What's the downside of a linear transformation?"</span>
 <ul>
@@ -4404,7 +4404,7 @@ $$p_s(s)=\frac{p_r(r)}{T'(r)}$$
 </ul>
 <p class="mini">용어 주의: 히스토그램 평활화(equalization)는 이웃 평균으로 노이즈를 줄이는 평활화(smoothing)와 전혀 다른 연산이다. 시험 문제는 영어로 나오므로 equalization과 smoothing이라는 영어 용어로 구분해 두자. (<a href="#c2-7">2.5</a> 참고, 녹음 10/14)</p>
 <p class="mini">시험 범위: 구현은 과제 2라서 시험에서 제외되지만, 원리와 유도는 수업 내용이라 범위 안이다. (녹음 10/12, 10/14)</p>
-<figure class="fig" style="max-width:560px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 605 502%22/%3E" data-src="assets/fig/w7_21_eq.jpg" width="605" height="502" alt="W7 p21 · 평활화 전후 EM 영상과 histogram (a bump → nearly flat)"><figcaption>W7 p21 · 평활화 전후의 EM 영상과 histogram. bump가 거의 평평해진다(a bump → nearly flat)</figcaption></figure>
+<figure class="fig" style="max-width:560px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 605 502%22/%3E" data-src="assets/fig/w7_21_eq.webp" width="605" height="502" alt="W7 p21 · 평활화 전후 EM 영상과 histogram (a bump → nearly flat)"><figcaption>W7 p21 · 평활화 전후의 EM 영상과 histogram. bump가 거의 평평해진다(a bump → nearly flat)</figcaption></figure>
 <div class="box easy"><span class="bt">🔰 쉽게 말하면</span>
 픽셀들을 밝기 순서로 줄 세운 뒤, <b>나보다 어둡거나 같은 픽셀이 전체의 몇 %인지</b>를 새 밝기로 주는 것이다.<br>
 예를 들어 그 비율이 30%인 픽셀은 새 값이 0.30 × 255 = 76.5이고, 80%인 픽셀은 0.80 × 255 = 204다.<br>
@@ -4437,7 +4437,7 @@ $$p_r(r)=\frac{h(r)}{N},\qquad \sum_{r=0}^{L-1}p_r(r)=1$$</li>
 <li><b>목표 분포를 정한다.</b> 0부터 L−1까지 uniform이어야 하므로, 높이와 폭의 곱이 1이 되도록 높이를 정한다.
 $$p_s(s)=\frac1{L-1}$$</li>
 </ol>
-<figure class="fig" style="max-width:700px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W7-23.jpg" width="1100" height="619" alt="W7 p23 · 입력 p_r(r) = h(r)/N (bump, 면적 1) → 목표 p_s(s) = 1/(L−1) (평평, 면적 1)"><figcaption>W7 p23 · 입력 p_r(r) = h(r)/N은 면적이 1인 bump다. 목표 p_s(s) = 1/(L−1)은 높이 1/255로 평평하고, 면적이 1이다</figcaption></figure>
+<figure class="fig" style="max-width:700px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W7-23.webp" width="1100" height="619" alt="W7 p23 · 입력 p_r(r) = h(r)/N (bump, 면적 1) → 목표 p_s(s) = 1/(L−1) (평평, 면적 1)"><figcaption>W7 p23 · 입력 p_r(r) = h(r)/N은 면적이 1인 bump다. 목표 p_s(s) = 1/(L−1)은 높이 1/255로 평평하고, 면적이 1이다</figcaption></figure>
 </div>
 </section>
 
@@ -4460,14 +4460,14 @@ $$s=T(r)=(L-1)\int_0^r p_r(w)\,dw=(L-1)\sum_{j=0}^{r}\frac{h(j)}{N}$$
 즉 <b>s = (L−1) × 입력의 CDF(r)</b>이다. 각 픽셀값을 "그 값 이하인 픽셀의 비율"에 비례하는 값으로 보낸다.</li>
 </ol>
 
-<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1034 496%22/%3E" data-src="assets/fig/w7_24_deriv.jpg" width="1034" height="496" alt="W7 p24 · CDF 면적을 같게 놓는 유도 과정"><figcaption>W7 p24 · CDF 면적을 같게 놓는 유도 과정</figcaption></figure>
+<figure class="fig" style="max-width:820px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1034 496%22/%3E" data-src="assets/fig/w7_24_deriv.webp" width="1034" height="496" alt="W7 p24 · CDF 면적을 같게 놓는 유도 과정"><figcaption>W7 p24 · CDF 면적을 같게 놓는 유도 과정</figcaption></figure>
 </div>
 </section>
 
 <section class="slide" id="c5-11" data-ch="c5" data-title="5.7 Histogram equalization (5/6)">
 <div class="card">
 <h3>5.7 Histogram equalization <span class="part">(5/6)</span> <span class="tag must">유도 필수</span><span class="src">W7 p21–24 · notebook 6 · 녹음 10/14</span></h3>
-<figure class="fig" style="max-width:720px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 891 483%22/%3E" data-src="assets/fig/w7_22_eqcurve.jpg" width="891" height="483" alt="W7 p22 · 정규화(직선) vs 평활화 s = 255·F(r): 픽셀이 몰린 곳에서 가파르다"><figcaption>W7 p22 · 정규화는 직선이고, 평활화 s = 255·F(r)는 픽셀이 몰린 곳에서 가파르다</figcaption></figure>
+<figure class="fig" style="max-width:720px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 891 483%22/%3E" data-src="assets/fig/w7_22_eqcurve.webp" width="891" height="483" alt="W7 p22 · 정규화(직선) vs 평활화 s = 255·F(r): 픽셀이 몰린 곳에서 가파르다"><figcaption>W7 p22 · 정규화는 직선이고, 평활화 s = 255·F(r)는 픽셀이 몰린 곳에서 가파르다</figcaption></figure>
 <div class="box key"><span class="bt">직관</span><ul>
 <li>T의 기울기는 $(L-1)\,p_r(r)$이다. 그래서 <b>픽셀이 몰린(dense) 구간에서는 가파르게</b> 올라가 출력값을 넓게 벌린다.</li>
 <li>반대로 <b>드문(rare) 구간에서는 평평하게</b> 올라가 출력값을 압축한다. 쌓인 "쓰레기 더미를 고르게 펴서" 0–255를 채우는 셈이다.</li>
@@ -4886,7 +4886,7 @@ $$\begin{bmatrix}1&2\\3&4\end{bmatrix}\begin{bmatrix}1&2\\1&1\end{bmatrix}=\begi
 <li><code>df.index</code>는 행 label이고, <code>df.columns</code>는 열 이름이다. <code>df["body_mass_g"]</code>처럼 열 하나를 꺼내면 Series가 된다.</li>
 <li>계산할 때는 numpy array를 꺼내서 쓴다. 예: <code>df[["bill_length_mm","bill_depth_mm"]].values</code> 또는 <code>.to_numpy()</code>. <span class="mini">("Extracts info into numpy array for computation")</span></li>
 </ul>
-<figure class="fig" style="max-width:720px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_1-04.jpg" width="1100" height="619" alt="W3-1 p4 · DataFrame = index를 공유하는 Series들의 dict (penguins 표, df.index, df.columns, df['body_mass_g'])"><figcaption>W3-1 p4. DataFrame은 같은 index(왼쪽 0–4)를 공유하는 Series들의 dict다. 열 하나인 <code>df["body_mass_g"]</code>가 Series다.</figcaption></figure>
+<figure class="fig" style="max-width:720px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_1-04.webp" width="1100" height="619" alt="W3-1 p4 · DataFrame = index를 공유하는 Series들의 dict (penguins 표, df.index, df.columns, df['body_mass_g'])"><figcaption>W3-1 p4. DataFrame은 같은 index(왼쪽 0–4)를 공유하는 Series들의 dict다. 열 하나인 <code>df["body_mass_g"]</code>가 Series다.</figcaption></figure>
 </div>
 </section>
 
@@ -4958,7 +4958,7 @@ $$\begin{bmatrix}1&2\\3&4\end{bmatrix}\begin{bmatrix}1&2\\1&1\end{bmatrix}=\begi
 <li>열은 위치 2, 3, 4의 3개다. 각각 bill_length, bill_depth, flipper_length다.</li>
 <li>노트북처럼 원래 index가 0, 1, 2…인 표에서도 끝 처리는 다르다. <code>df.loc[2:4]</code>는 행 2, 3, 4를 주고, <code>df.iloc[2:4]</code>는 행 2, 3을 준다.</li>
 </ul>
-<figure class="fig" style="max-width:600px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_1-08.jpg" width="1100" height="619" alt="W3-1 p8 · positions(0–4, 0–6) vs labels(220, 222, 225, 226, 228): loc은 끝 포함, iloc은 끝 제외"><figcaption>W3-1 p8. 초록 숫자는 위치(position)다. 굵은 220, 222…는 라벨(label)이다. loc은 라벨로 찾고 끝을 포함하며, iloc은 위치로 찾고 끝을 제외한다.</figcaption></figure>
+<figure class="fig" style="max-width:600px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_1-08.webp" width="1100" height="619" alt="W3-1 p8 · positions(0–4, 0–6) vs labels(220, 222, 225, 226, 228): loc은 끝 포함, iloc은 끝 제외"><figcaption>W3-1 p8. 초록 숫자는 위치(position)다. 굵은 220, 222…는 라벨(label)이다. loc은 라벨로 찾고 끝을 포함하며, iloc은 위치로 찾고 끝을 제외한다.</figcaption></figure>
 <div class="box easy"><span class="bt">🔰 쉽게 말하면</span>loc은 이름표로 찾고, iloc은 줄 번호로 찾는다. 필터링한 표에서 각 행은 원래 이름표(220, 222, 225…)를 그대로 달고 있다. 하지만 줄 번호는 위에서부터 0, 1, 2…로 다시 센다. "220번 이름표부터 225번 이름표까지"라고 하면 225번도 포함된다. "줄 번호 1부터 3 앞까지"(<code>iloc[1:3]</code>)라고 하면 줄 번호 1, 2만 나오고 줄 번호 3은 빠진다. 줄 번호는 0부터 센다.</div>
 </div>
 </section>
@@ -5350,7 +5350,7 @@ $$\begin{bmatrix}1&2\\3&4\end{bmatrix}\begin{bmatrix}1&2\\1&1\end{bmatrix}=\begi
 <section class="slide" id="c6-3e" data-ch="c6" data-title="6.3 함수, 지역/전역 변수, 클래스 (7/8): == vs __eq__ — runtime">
 <div class="card">
 <h3>6.3 함수, 지역/전역 변수, 클래스 (7/8): == vs __eq__ — runtime <span class="src">W3-1 p3</span></h3>
-<figure class="fig" style="max-width:560px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 616 365%22/%3E" data-src="assets/fig/w31_03_eq.jpg" width="616" height="365" alt="W3-1 p3 · 10,000번 비교 시간: list1 == list2 vs list1.__eq__(list2)"><figcaption>W3-1 p3. <code>list1 == list2</code>와 <code>list1.__eq__(list2)</code>로 10,000번 비교하는 데 걸린 시간.</figcaption></figure>
+<figure class="fig" style="max-width:560px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 616 365%22/%3E" data-src="assets/fig/w31_03_eq.webp" width="616" height="365" alt="W3-1 p3 · 10,000번 비교 시간: list1 == list2 vs list1.__eq__(list2)"><figcaption>W3-1 p3. <code>list1 == list2</code>와 <code>list1.__eq__(list2)</code>로 10,000번 비교하는 데 걸린 시간.</figcaption></figure>
 <details class="qa"><summary><code>obj1 == obj2</code>와 <code>obj1.__eq__(obj2)</code>는 runtime이 다른가? 다르다면 어느 쪽이 빠른가?</summary><div class="ans"><p><b>runtime은 다르고, <code>==</code>가 더 빠르다.</b> 슬라이드에서 <code>__eq__</code>는 약 1.99배 느렸다. 10,000회 비교의 median은 <code>==</code>가 0.63 ms, <code>__eq__</code>가 1.25 ms였다.</p>
 <p>이유는 다음과 같다. <span class="tag add">자료 외 보충</span> <code>==</code>는 Python에 미리 만들어진 비교 전용 경로로 바로 간다. 반면 <code>.__eq__(…)</code>는 먼저 객체에서 <code>__eq__</code>라는 이름의 메서드를 찾아 꺼내고, 그다음 보통 함수처럼 부른다. 이 "찾고 부르는" 단계가 비교할 때마다 더해져서 느려진다.</p>
 <p>슬라이드 예처럼 list끼리 비교하면 결과는 같다. 하지만 일반적으로 <code>.__eq__</code>는 <code>NotImplemented</code>를 반환할 수 있다. 예: <code>(1).__eq__(1.0)</code>. 이때 <code>==</code>는 반대편의 <code>__eq__</code>로 넘어가서 <code>1 == 1.0</code>이 True가 되므로, 두 방식의 결과가 다를 수도 있다. <span class="tag add">자료 외 보충</span></p></div></details>
@@ -5557,7 +5557,7 @@ $$\begin{bmatrix}1&2\\3&4\end{bmatrix}\begin{bmatrix}1&2\\1&1\end{bmatrix}=\begi
 <li><span class="myth">같은 함수를 부르니 속도도 같다.</span><span class="fact">결과는 같지만 거치는 경로가 달라서 속도가 다르다.</span></li>
 <li>문법과 dunder method는 짝을 이룬다. <code>==</code>는 <code>__eq__</code>, <code>len()</code>은 <code>__len__</code>, <code>print()</code>는 <code>__str__</code>와 연결된다.</li>
 </ul></li></ul>
-<figure class="fig" style="max-width:720px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_1-03.jpg" width="1100" height="619" alt="W3-1 p3: list1==list2와 list1.__eq__(list2)의 실행시간 분포, median 0.63 ms vs 1.25 ms"><figcaption>W3-1 p3. <code>==</code>의 median은 0.63 ms이고 <code>.__eq__()</code>는 1.25 ms로, 1.99배 느리다.</figcaption></figure></div></details>
+<figure class="fig" style="max-width:720px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W3_1-03.webp" width="1100" height="619" alt="W3-1 p3: list1==list2와 list1.__eq__(list2)의 실행시간 분포, median 0.63 ms vs 1.25 ms"><figcaption>W3-1 p3. <code>==</code>의 median은 0.63 ms이고 <code>.__eq__()</code>는 1.25 ms로, 1.99배 느리다.</figcaption></figure></div></details>
 <div class="box trap"><span class="bt">⚠️ 틀리기 쉬운 것 ("Error"·흐름 제어 문제)</span><ul>
 <li><span class="myth">답이 Error면 ‘Error’라고만 쓰면 된다.</span><span class="fact">어느 줄에서, 왜 나는지까지 써야 한다. 예: “함수 안의 대입 때문에 a가 local이 되었고, 값이 정해지기 전에 읽혔다.”</span></li>
 <li><span class="myth">break, continue, return은 모두 비슷하게 ‘멈추는’ 명령이다.</span><span class="fact">break는 가장 가까운 루프를 끝내고, continue는 이번 반복만 건너뛴다. return은 함수 자체를 끝낸다.</span></li>
@@ -6025,7 +6025,7 @@ $$s=\mathrm{clip}(r+\beta,0,L-1)$$
 <li><b>목표</b>: “use up all the range of values”다. 이상적으로는 균등(uniform) 분포가 된다.</li>
 <li>방법은 두 가지다. 먼저 선형 변환인 정규화(normalization)를 보고, 이어서 비선형 변환인 평활화를 본다.</li>
 <li><b>⚠️ 함정</b><span class="myth">C의 핵심은 대비가 크다는 것이다.</span><span class="fact">‘대비가 크다’보다 ‘히스토그램이 전 범위에 거의 평평하게 퍼져 있다’가 핵심이다. 범위만 넓히고 모양은 그대로인 선형 정규화와는 다르다. <span class="mini">(다음 질문)</span></span></li></ul>
-<figure class="fig" style="max-width:760px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W7-17.jpg" width="1100" height="619" alt="W7 p17: EM 영상 A(어두운 쪽에 몰림), B(가운데 좁음), C(전 범위) 와 각 히스토그램"><figcaption>W7 p17. A는 어두운 쪽에 몰려 있다(crowded at the dark end). B는 가운데에 좁게 모여 있다(narrow, in the middle). C는 전 범위에 퍼져 있다(spread over the full range). 그래서 균등 분포(uniform distribution)에 가깝다.</figcaption></figure></div></details>
+<figure class="fig" style="max-width:760px"><img class="lazy" src="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1100 619%22/%3E" data-src="assets/fig/W7-17.webp" width="1100" height="619" alt="W7 p17: EM 영상 A(어두운 쪽에 몰림), B(가운데 좁음), C(전 범위) 와 각 히스토그램"><figcaption>W7 p17. A는 어두운 쪽에 몰려 있다(crowded at the dark end). B는 가운데에 좁게 모여 있다(narrow, in the middle). C는 전 범위에 퍼져 있다(spread over the full range). 그래서 균등 분포(uniform distribution)에 가깝다.</figcaption></figure></div></details>
 <details class="qa"><summary>What's the downside of using a linear transformation (normalization)? <span class="wk">녹음 10/14 · W7 p19–20</span></summary><div class="ans"><p><b>히스토그램 모양(bump)을 바꿀 수 없다. 또 min-max 방식에서는 outlier가 범위를 결정한다.</b></p><ul>
 <li><b>식</b>: min-max 정규화는 다음과 같다.
 $$s=(L-1)\frac{r-r_{min}}{r_{max}-r_{min}}$$</li>
