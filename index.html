@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>생데 중간고사 대비</title>
+<meta name="description" content="KAIST BS.49903 생명과학 데이터 사이언스(DS/AI for Biology) 중간고사 대비: 한국어 학습노트와 실전형 모의고사.">
+<meta property="og:title" content="생데 중간고사 대비">
+<meta property="og:description" content="BS.49903 DS/AI for Biology · 한국어 학습노트 + 실전형 모의고사">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%226%22 fill=%22%2322c08a%22/%3E%3C/svg%3E">
+<style>
+:root {
+  --bg: #f4f6f8; --surface: #fff; --text: #1f2733; --muted: #5b6675; --muted-strong: #4a5462;
+  --border: #dfe4ea; --accent: #22c08a; --accent-ink: #0f7a55; --accent-soft: #e7f8f1; --rule: #cfd6de;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0; background: var(--bg); color: var(--text); word-break: keep-all; overflow-wrap: break-word;
+  font: 16px/1.75 -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", "Segoe UI", sans-serif;
+}
+main { max-width: 760px; margin: 0 auto; padding: 48px 16px 64px; }
+h1 { font-size: 1.9rem; line-height: 1.3; margin: 0 0 6px; letter-spacing: -.01em; }
+h1::before { content: ""; display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); margin-right: 12px; vertical-align: 5px; }
+.sub { color: var(--muted); margin: 0 0 28px; }
+.cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 620px) { .cards { grid-template-columns: 1fr; } main { padding-top: 32px; } }
+a.card {
+  display: block; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 22px 24px;
+  color: inherit; text-decoration: none; box-shadow: 0 1px 2px rgba(16,24,40,.05), 0 4px 14px rgba(16,24,40,.06);
+  transition: border-color .15s, transform .15s;
+}
+a.card:hover { border-color: var(--accent); transform: translateY(-1px); }
+a.card h2 { margin: 0 0 6px; font-size: 1.25rem; color: var(--accent-ink); }
+a.card h2 span { color: var(--muted); font-weight: 500; font-size: .95rem; margin-left: 4px; }
+a.card p { margin: 0; color: var(--muted-strong); font-size: .95rem; }
+a.card ul { margin: 10px 0 0; padding-left: 1.1em; color: var(--muted-strong); font-size: .92rem; }
+a.card li { margin: 2px 0; }
+.note { margin-top: 26px; border-left: 3px solid var(--rule); padding: 2px 0 2px 16px; color: var(--muted-strong); font-size: .95rem; }
+.note p { margin: 6px 0; }
+.note b { color: var(--text); font-weight: 650; }
+footer { margin-top: 36px; color: var(--muted); font-size: .85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>생데 중간고사 대비</h1>
+  <p class="sub">KAIST BS.49903 DS/AI for Biology (생명과학 데이터 사이언스) · 중간고사 2026-10-26(월) 13:00–14:15</p>
+
+  <div class="cards">
+    <a class="card" href="study_guide.html">
+      <h2>학습노트 <span>→</span></h2>
+      <p>챕터별로 좌우로 넘기는 한국어 개념 정리</p>
+      <ul>
+        <li>쉽게 말하면 · 왜 쓰나 · 틀리기 쉬운 것</li>
+        <li>시험 답안 핵심 문장과 영어 문제 대비</li>
+        <li>O/X 퀴즈 · 헷갈리는 개념 쌍 · 오개념</li>
+      </ul>
+    </a>
+    <a class="card" href="mock_exam.html">
+      <h2>모의고사 <span>→</span></h2>
+      <p>실제 시험처럼 4문항 × 25점, 세트 4개</p>
+      <ul>
+        <li>답을 타이핑하면 이 브라우저에 자동 저장</li>
+        <li>제출하면 모범답안과 채점기준이 열림</li>
+        <li>답안을 .md로 내보내 Claude/GPT에게 채점받기</li>
+      </ul>
+    </a>
+  </div>
+
+  <div class="note">
+    <p><b>시험 형식</b> · 4문항(문항당 약 15분), 단답 + 서술, 전부 이론 문제("Derive it, prove it, or explain why it works"). 코딩과 파이썬 문법 암기는 없습니다.</p>
+    <p><b>답안 언어</b> · 문제는 영어로 나오지만 답안은 한국어로 써도 됩니다(교수님 허용). 핵심 용어는 영어를 같이 쓰면 좋습니다.</p>
+    <p><b>범위</b> · 강의 W1–W7 슬라이드, 실습 노트북, 과제 1. 과제 2(평활화 구현)는 제외하지만 평활화의 원리와 유도는 범위입니다.</p>
+  </div>
+
+  <footer>강의 자료(슬라이드 그림·강의 내용)는 J. Alexander Bae 교수님의 수업 자료를 바탕으로 정리했습니다. 답안과 진행 상황은 각자의 브라우저에만 저장됩니다.</footer>
+</main>
+</body>
+</html>
