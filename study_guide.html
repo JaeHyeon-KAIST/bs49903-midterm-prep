@@ -10,11 +10,10 @@
 <meta property="og:description" content="BS.49903 DS/AI for Biology 중간고사 대비 · 챕터별 개념 정리 · O/X 퀴즈 · 오개념">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Ccircle cx=%228%22 cy=%228%22 r=%226%22 fill=%22%2322c08a%22/%3E%3C/svg%3E">
-<!-- KaTeX 0.16.9 (MIT): 모의고사와 같은 파일을 함께 쓴다. 한 번 받으면 브라우저가 기억한다 -->
+<!-- KaTeX 0.16.9 (MIT): 학습노트와 모의고사가 같은 파일을 함께 쓴다 -->
 <link rel="stylesheet" href="assets/katex/katex.css">
 <script src="assets/katex/katex.min.js"></script>
 <script src="assets/katex/auto-render.min.js"></script>
-
 <style>
 :root{
   --bg:#f4f6f8; --surface:#ffffff; --surface2:#f0f3f6; --text:#1b2330; --muted:#5b6675; --border:#dfe4ea;
@@ -141,6 +140,7 @@ details.qa > summary::before{content:"Q"; flex:0 0 auto; font-size:12px; font-we
   border-radius:6px; padding:1px 7px; height:fit-content; margin-top:4px}
 details.qa[open] > summary{border-bottom:1px dashed var(--border)}
 details.qa > summary > .tag{align-self:flex-start; flex:0 0 auto; margin-top:4px}
+details.qa > summary > .qt{flex:1 1 auto; min-width:0}   /* 질문 글은 한 덩어리(공백 보존) */
 details.qa .ans{padding:10px 17px 13px}
 details.qa .ans::before{content:"모범답안"; display:block; font-size:12px; font-weight:800; color:var(--accent-ink); margin-bottom:2px}
 details.why{border-left:3px solid var(--info); padding:5px 13px; margin:12px 0; background:var(--info-soft); border-radius:0 10px 10px 0}
@@ -274,6 +274,28 @@ mark.hit{background:#ffe27a; color:#111; border-radius:3px; padding:0 1px}
 .slide.active.navlock{overflow-y:hidden}
 #dbg{position:fixed; left:8px; bottom:70px; z-index:80; margin:0; padding:8px 10px; font:12px/1.5 ui-monospace,Menlo,monospace; white-space:pre;
   background:rgba(0,0,0,.78); color:#e8ffe8; border-radius:8px; pointer-events:none}
+
+
+/* ---------- 고쳐 쓰기 쌍(.fix: ✗ → ○ → 왜), 규정 인용(blockquote.rule), 시험 예상 태그 ---------- */
+.fix{margin:12px 0; border:1px solid var(--border); border-radius:10px; overflow:hidden; background:var(--surface)}
+.fix > p{margin:0; padding:7px 14px 7px 40px; position:relative; line-height:1.7}
+.fix > p::before{position:absolute; left:14px; top:7px; font-weight:800}
+.fix > .bad{background:color-mix(in srgb,var(--warn) 7%,var(--surface)); color:var(--muted-strong)}
+.fix > .bad::before{content:"✗"; color:var(--warn-ink)}
+.fix > .good{background:var(--accent-soft)}
+.fix > .good::before{content:"○"; color:var(--accent-ink)}
+.fix > .alt{background:var(--accent-soft); border-top:1px dashed color-mix(in srgb,var(--accent) 35%,transparent)}
+.fix > .alt::before{content:"○"; color:var(--accent-ink)}
+.fix > .why{font-size:14.5px; color:var(--muted-strong); border-top:1px solid var(--border)}
+.fix > .why::before{content:"왜"; font-size:12px; top:9px; color:var(--muted)}
+.fix em, .fix u{font-style:normal; text-decoration:underline; text-decoration-thickness:2px; text-underline-offset:3px; text-decoration-color:var(--warn)}
+.fix > .good em, .fix > .good u, .fix > .alt em, .fix > .alt u{text-decoration-color:var(--accent)}
+blockquote.rule{margin:12px 0; padding:8px 14px; border-left:3px solid var(--accent); background:var(--surface2); border-radius:0 10px 10px 0}
+blockquote.rule .no{font-weight:800; color:var(--accent-ink); margin-right:6px}
+.tag.exam{color:var(--warn-ink) !important; font-weight:750}
+table.pairs-t td:first-child, table.pairs-t th:first-child{white-space:nowrap}
+.ok-mark{color:var(--accent-ink); font-weight:800}
+.no-mark{color:var(--warn-ink); font-weight:800; text-decoration:line-through}
 
 /* ---------- lightbox ---------- */
 #lightbox{position:fixed; inset:0; z-index:60; background:rgba(0,0,0,.85); display:none; align-items:center; justify-content:center; padding:18px; cursor:zoom-out}
@@ -6304,7 +6326,7 @@ $$s=(L-1)\int_0^r p_r(w)\,dw$$</li>
 <div id="lightbox"><img alt=""></div>
 
 <script>
-/* 생데 학습노트 — 챕터별 O/X · 헷갈리는 개념 쌍 · 오개념 */
+/* 학습노트 퀴즈 데이터 — 챕터별 O/X · 헷갈리는 개념 쌍 · 오개념 (quiz_cK.js 조각을 이어 붙임) */
 (function () {
   const R = String.raw;
   window.STUDY_QUIZ = {
@@ -6991,7 +7013,6 @@ $$s=(L-1)\int_0^r p_r(w)\,dw$$</li>
     },
   };
 })();
-
 </script>
 <script>
 (function(){
@@ -7106,7 +7127,7 @@ function buildQuiz(){
       var cfc = chunks(cf, 6);
       cfc.forEach(function(part, pi){
         var h2 = '<p class="mini">두 개념의 차이를 한 줄로 말할 수 있는지 확인하세요.</p><div class="pairs">';
-        part.forEach(function(x){ h2 += '<div class="pair"><div class="ab"><div>' + x.a + '</div><div class="vs">vs</div><div>' + x.b + '</div></div><div class="d">' + x.diff + '</div></div>'; });
+        part.forEach(function(x){ h2 += '<div class="pair"><div class="ab"><div><span>' + x.a + '</span></div><div class="vs">vs</div><div><span>' + x.b + '</span></div></div><div class="d">' + x.diff + '</div></div>'; });
         made.push(quizSlide(c.id, "pairs" + (pi ? pi + 1 : ""), c.num + ".✎ 헷갈리는 개념 쌍" + (cfc.length > 1 ? " (" + (pi + 1) + "/" + cfc.length + ")" : ""), h2 + '</div>'));
       });
     }
@@ -7571,6 +7592,12 @@ $("#printBtn").addEventListener("click", function(){ prePrint(); loadAllImgs().t
 
 /* ---------- init ---------- */
 buildQuiz();
+/* 질문 줄(summary)은 flex라서 글자와 <b>·<code> 사이 공백이 사라진다. 출처(.wk) 앞까지를 한 덩어리(span)로 감싼다 */
+$$("details.qa > summary").forEach(function(sm){
+  var q = document.createElement("span"); q.className = "qt";
+  Array.prototype.slice.call(sm.childNodes).forEach(function(n){ if (!(n.nodeType === 1 && n.classList.contains("wk"))) q.appendChild(n); });
+  sm.insertBefore(q, sm.firstChild);
+});
 index();
 buildTabs();
 buildIndex();
